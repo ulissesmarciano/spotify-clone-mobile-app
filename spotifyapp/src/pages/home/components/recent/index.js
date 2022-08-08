@@ -13,7 +13,7 @@ const RecentContainer = ({title}) => {
     );
 };
 
-const Recent = () => {
+const RecentSection = () => {
     return (
     <View>
         <View >
@@ -44,4 +44,4 @@ const Recent = () => {
     </View>
     );
 };
-export default Recent;
+export default RecentSection;

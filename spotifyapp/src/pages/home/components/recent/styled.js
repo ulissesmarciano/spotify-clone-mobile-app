@@ -36,7 +36,7 @@ export default StyleSheet.create({
 
     recentItem: {
         flexDirection: 'row',
-        backgroundColor: 'red',
+        backgroundColor: '#rgb(42, 42, 42)',
         marginTop: 10,
         width: 180,
         height: 60,
