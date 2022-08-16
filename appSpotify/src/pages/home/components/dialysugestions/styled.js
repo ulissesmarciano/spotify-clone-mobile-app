@@ -32,21 +32,10 @@ export default StyleSheet.create({
       marginBottom: 10,
     },
 
-    image2:{
-      height: 160,
-      width: 160,
-      marginBottom: 10,
-      borderRadius: 100,
-      },
-
     title: {
-      color: 'white',
-      fontSize: 18,
-      fontWeight: 'bold',
+        fontWeight: 'bold',
+        color: '#rgb(135, 135, 135)',        
+        fontSize: 18,
     },
     
-    subtitle: {
-      fontSize: 18,
-      color: '#rgb(135, 135, 135)',
-    },
 });
