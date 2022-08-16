@@ -62,7 +62,7 @@ const Item = ({ title }) => (
 
 const Item2 = ({ title, subtitle }) => (
     <View style={S.item}>
-        <Image style={S.image} source={{uri: imageProfileGithub}}/>           
+      <Image style={S.image} source={{uri: imageProfileGithub}}/>           
       <Text style={S.title}>{title}</Text>
       <Text style={S.subtitle}>{subtitle}</Text>
     </View>

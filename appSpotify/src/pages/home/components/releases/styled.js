@@ -1,6 +1,7 @@
 import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
+    
     oMTitle: {
       marginTop: 35,
       color: 'white',
