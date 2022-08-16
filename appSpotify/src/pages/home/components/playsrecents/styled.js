@@ -2,26 +2,27 @@ import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
     oMTitle: {
-        color: 'white',
-        fontSize: 32,
-        marginLeft: 15,
-        fontWeight: 'bold',
+      color: 'white',
+      fontSize: 32,
+      marginLeft: 15,
+      fontWeight: 'bold',
     },
 
     titleContainer: {
-        marginTop: 20,
-        alignSelf: 'center',
+      marginTop: 20,
+      alignSelf: 'center',
     },
 
     container: {
-        marginTop: 15,
-        marginLeft: 6,
-        alignSelf: 'center',
-        height: 240,
+      marginTop: 15,
+      marginLeft: 6,
+      alignSelf: 'center',
+      height: 240,
     },
 
     item: {
-      height: 240,
+      backgroundColor: 'red',
+      height: 200,
       width: 140,
       marginHorizontal: 6,
     },
@@ -29,20 +30,16 @@ export default StyleSheet.create({
     image: {
       height: 140,
       width: 140,
-      marginBottom: 8,
-      borderRadius: 100,
     },
 
     image2: {
       height: 140,
       width: 140,
-      marginBottom: 8,
     },
 
     image3: {
       height: 70,
       width: 70,
-      marginBottom: 8,
     },
 
     image3Orientation: {
@@ -50,6 +47,7 @@ export default StyleSheet.create({
     },
 
     title: {
+      marginTop: 8,
       flexDirection: 'row',
       flexWrap: 'wrap',
       color: 'white',
