@@ -33,6 +33,13 @@ export default StyleSheet.create({
     },
 
     image2:{
+        height: 160,
+        width: 160,
+        marginBottom: 10,
+        borderRadius: 100,
+      },
+
+    image2:{
       height: 160,
       width: 160,
       marginBottom: 10,

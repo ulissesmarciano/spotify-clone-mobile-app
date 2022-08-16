@@ -5,7 +5,8 @@ import RecentSection from "./components/recent/recent.js";
 import PodcastSection from "./components/podcast/podcast.js";
 import OldMusicsSection from "./components/oldmusics/oldmusics.js";
 import PlayRecentsSection from "./components/playsrecents/playsrecents.js"
-import AlbunsSection from "./components/albuns/index.js";
+import AlbunsSection from "./components/albuns/albuns.js";
+import DiscoverSection from "./components/discover/discover.js";
 
 
 const colorDefault = '#rgb(18, 18, 18)';
@@ -20,6 +21,7 @@ const Home = () => {
                 <OldMusicsSection />
                 <PlayRecentsSection/>
                 <AlbunsSection />
+                <DiscoverSection />
             </ScrollView>
         </SafeAreaView>
     );
