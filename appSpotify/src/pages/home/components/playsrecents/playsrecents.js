@@ -74,7 +74,7 @@ const Item3 = ({ title }) => (
   
 );
 
-const PlayRecents = () => {
+const PlayRecentsSection = () => {
     const renderItem = ({ item }) => {
       if (item.title == 'Playlist'){
         return <Item2 title={item.title}/>
@@ -99,4 +99,4 @@ const PlayRecents = () => {
     )
 };
 
-export default PlayRecents;
+export default PlayRecentsSection;

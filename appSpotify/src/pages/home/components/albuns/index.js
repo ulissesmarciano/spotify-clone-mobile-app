@@ -60,14 +60,14 @@ const Item = ({ title, subtitle }) => (
     </View>
   );
 
-const OldMusicsSection = () => {
+const AlbunsSection = () => {
     const renderItem = ({ item }) => (
         <Item title={item.title} subtitle={item.subtitle}/>
       );
 
     return(
         <View style={S.titleContainer}>
-            <Text style={S.oMTitle}>Suas músicas estão com saudade</Text>        
+            <Text style={S.oMTitle}>Álbuns para você</Text>        
         <SafeAreaView style={S.container}>
         <FlatList
           data={DATA}
@@ -81,4 +81,4 @@ const OldMusicsSection = () => {
     )
 };
 
-export default OldMusicsSection;
+export default AlbunsSection;

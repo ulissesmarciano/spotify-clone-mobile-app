@@ -17,7 +17,7 @@ export default StyleSheet.create({
       marginTop: 15,
       marginLeft: 6,
       alignSelf: 'center',
-      height: 240,
+      height: 200,
     },
 
     item: {

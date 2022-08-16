@@ -3,8 +3,9 @@ import { SafeAreaView, StyleSheet, ScrollView, StatusBar } from "react-native";
 
 import RecentSection from "./components/recent/recent.js";
 import PodcastSection from "./components/podcast/podcast.js";
-import OldMusics from "./components/oldmusics/oldmusics.js";
-import PlayRecents from "./components/playsrecents/playsrecents.js"
+import OldMusicsSection from "./components/oldmusics/oldmusics.js";
+import PlayRecentsSection from "./components/playsrecents/playsrecents.js"
+import AlbunsSection from "./components/albuns/index.js";
 
 
 const colorDefault = '#rgb(18, 18, 18)';
@@ -16,8 +17,9 @@ const Home = () => {
             <ScrollView>
                 <RecentSection />
                 <PodcastSection />
-                <OldMusics />
-                <PlayRecents/>
+                <OldMusicsSection />
+                <PlayRecentsSection/>
+                <AlbunsSection />
             </ScrollView>
         </SafeAreaView>
     );
