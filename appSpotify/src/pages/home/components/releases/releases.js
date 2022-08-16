@@ -7,85 +7,77 @@ const imageProfileGithub = 'https://avatars.githubusercontent.com/u/104742158?v=
 const DATA = [
   {
     id: 1,
-    title: 'Título da playlist',
+    title: 'Confira os lançamentos do...',
     subtitle: 'Playlist',
   },
   {
     id: 2,
-    title: 'Grupo de playlists',
-    subtitle: 'Playlist',
+    title: 'Música',
+    subtitle: 'Single - Album',
   },
   {
     id: 3,
-    title: 'Título da playlist',
-    subtitle: 'Playlist',
+    title: 'Música',
+    subtitle: 'Single - Album',
   },
 
   {
     id:4,
-    title: 'Título da playlist',
-    subtitle: 'Playlist',
+    title: 'Música',
+    subtitle: 'Single - Album',
   },
 
   {
     id:5,
-    title: 'Grupo de playlists',
-    subtitle: 'Playlist',
+    title: 'Música',
+    subtitle: 'Single - Album',
   },
 
   {
     id:6,
-    title: 'Título da playlist',
-    subtitle: 'Playlist',
+    title: 'Música',
+    subtitle: 'Single - Album',
   },
 
   {
     id:7,
-    title: 'Título da playlist',
-    subtitle: 'Playlist',
+    title: 'Música',
+    subtitle: 'Single - Album',
   },
 
   {
     id:8,
-    title: 'Grupo de playlists',
-    subtitle: 'Playlist',
+    title: 'Música',
+    subtitle: 'Single - Album',
   },
   
 ];
 
-const Item = ({ title, subtitle }) => (
+const Item = ({ title }) => (
     <View style={S.item}>
       <Image style={S.image} source={{uri: imageProfileGithub}}/>
-      <Text style={S.title}>{title}</Text>
-      <Text style={S.subtitle}>{subtitle}</Text>
+      <Text style={S.title2}>{title}</Text>
     </View>
 );
 
 const Item2 = ({ title, subtitle }) => (
-    <View style={S.item2}>
-      <View style={S.imageOrientation}>
-        <Image style={S.image2} source={{uri: imageProfileGithub}}/>
-        <Image style={S.image2} source={{uri: imageProfileGithub}}/>
-      </View>
-      <View style={S.imageOrientation}>
-        <Image style={S.image2} source={{uri: imageProfileGithub}}/>
-        <Image style={S.image2} source={{uri: imageProfileGithub}}/>
-      </View>      
+    <View style={S.item}>
+        <Image style={S.image} source={{uri: imageProfileGithub}}/>           
       <Text style={S.title}>{title}</Text>
       <Text style={S.subtitle}>{subtitle}</Text>
     </View>
 );
 
-const MyPlaylistsSection = () => {
+const NewReleasesSection = () => {
     const renderItem = ({ item }) => {
-      if(item.title == 'Grupo de playlists'){
+      if(item.title == 'Música'){
         return <Item2 title={item.title} subtitle={item.subtitle}/>
       } else return <Item title={item.title} subtitle={item.subtitle}/>
     };
 
     return(
         <View style={S.titleContainer}>
-            <Text style={S.oMTitle}>Suas playlists</Text>        
+            <Text style={S.oMTitle}>Novos lançamentos para você</Text>        
         <SafeAreaView style={S.container}>
         <FlatList
           data={DATA}
@@ -99,4 +91,4 @@ const MyPlaylistsSection = () => {
     )
 };
 
-export default MyPlaylistsSection;
+export default NewReleasesSection;

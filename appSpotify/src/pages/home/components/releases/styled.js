@@ -26,30 +26,22 @@ export default StyleSheet.create({
       marginHorizontal: 6,
     },
 
-    item2: {
-        height: 220,
-        width: 160,
-        marginHorizontal: 6,
-    },
-    
     image:{
       height: 160,
       width: 160,
-    },
-
-    image2: {
-        height: 80,
-        width: 80,
-      },
-    
-    imageOrientation: {
-      flexDirection: 'row',
     },
 
     title: {
         marginTop: 15,
         fontWeight: 'bold',
         color: 'white',        
+        fontSize: 18,
+    },
+
+    title2: {
+        marginTop: 15,
+        fontWeight: 'bold',
+        color: '#rgb(135, 135, 135)',
         fontSize: 18,
     },
 
