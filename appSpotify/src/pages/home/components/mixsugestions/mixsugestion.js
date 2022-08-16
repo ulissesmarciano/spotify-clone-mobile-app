@@ -7,40 +7,40 @@ const imageProfileGithub = 'https://avatars.githubusercontent.com/u/104742158?v=
 const DATA = [
   {
     id: 1,
-    title: 'That mix of pop with...',
+    title: 'Artist, Artist1, Artist2, Artist3...',
   },
   {
     id: 2,
-    title: 'Suggestion of artist or musical style...',
+    title: 'Artist, Artist1, Artist2, Artist3...',
   },
   {
     id: 3,
-    title: 'That mix of pop with...',
+    title: 'Artist, Artist1, Artist2, Artist3...',
   },
 
   {
     id:4,
-    title: 'That mix of pop with...',
+    title: 'Artist, Artist1, Artist2, Artist3...',
   },
 
   {
     id:5,
-    title: 'Suggestion of artist or musical style...',
+    title: 'Artist, Artist1, Artist2, Artist3...',
   },
 
   {
     id:6,
-    title: 'Suggestion of artist or musical style...',
+    title: 'Artist, Artist1, Artist2, Artist3...',
   },
 
   {
     id:7,
-    title: 'That mix of pop with...',
+    title: 'Artist, Artist1, Artist2, Artist3...',
   },
 
   {
     id:8,
-    title: 'Suggestion of artist or musical style...',
+    title: 'Artist, Artist1, Artist2, Artist3...',
   },
 ];
 
@@ -51,7 +51,7 @@ const Item = ({ title }) => (
     </View>
 );
 
-const DiscoverSection = () => {
+const MixSugestionSection = () => {
     const renderItem = ({ item }) => (
         <Item title={item.title} />
     );
@@ -59,7 +59,7 @@ const DiscoverSection = () => {
 
     return(
         <View style={S.titleContainer}>
-            <Text style={S.oMTitle}>Descubra algo novo pra você</Text>        
+            <Text style={S.oMTitle}>Seus mixes mais ouvidos</Text>        
         <SafeAreaView style={S.container}>
         <FlatList
           data={DATA}
@@ -73,4 +73,4 @@ const DiscoverSection = () => {
     )
 };
 
-export default DiscoverSection;
+export default MixSugestionSection;

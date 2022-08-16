@@ -8,6 +8,7 @@ import PlayRecentsSection from "./components/playsrecents/playsrecents.js"
 import AlbunsSection from "./components/albuns/albuns.js";
 import DiscoverSection from "./components/discover/discover.js";
 import DialySugestionsSection from "./components/dialysugestions/dialysugestions.js";
+import MixSugestionSection from "./components/mixsugestions/mixsugestion.js";
 
 
 const colorDefault = '#rgb(18, 18, 18)';
@@ -24,6 +25,7 @@ const Home = () => {
                 <AlbunsSection />
                 <DiscoverSection />
                 <DialySugestionsSection />
+                <MixSugestionSection />
             </ScrollView>
         </SafeAreaView>
     );
