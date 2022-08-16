@@ -2,6 +2,7 @@ import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
     oMTitle: {
+        marginTop: 35,
         color: 'white',
         fontSize: 32,
         marginLeft: 15,
@@ -16,7 +17,7 @@ export default StyleSheet.create({
         marginTop: 15,
         marginLeft: 6,
         alignSelf: 'center',
-        height: 250,
+        height: 230,
     },
 
     item: {
@@ -26,8 +27,8 @@ export default StyleSheet.create({
     },
     
     image:{
-      height: 180,
-      width: 180,
+      height: 160,
+      width: 160,
       marginBottom: 10,
     },
 
