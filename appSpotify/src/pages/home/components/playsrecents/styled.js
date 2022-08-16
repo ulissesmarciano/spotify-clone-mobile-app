@@ -22,25 +22,36 @@ export default StyleSheet.create({
 
     item: {
       height: 240,
-      width: 180,
-      marginHorizontal: 8,
+      width: 140,
+      marginHorizontal: 6,
     },
     
-    image:{
-      height: 180,
-      width: 180,
+    image: {
+      height: 140,
+      width: 140,
       marginBottom: 8,
       borderRadius: 100,
     },
 
-    image2:{
-      height: 180,
-      width: 180,
+    image2: {
+      height: 140,
+      width: 140,
       marginBottom: 8,
-      borderRadius: 100,
+    },
+
+    image3: {
+      height: 70,
+      width: 70,
+      marginBottom: 8,
+    },
+
+    image3Orientation: {
+      flexDirection: 'row',
     },
 
     title: {
+      flexDirection: 'row',
+      flexWrap: 'wrap',
       color: 'white',
       fontSize: 18,
       fontWeight: 'bold',

@@ -7,54 +7,81 @@ const imageProfileGithub = 'https://avatars.githubusercontent.com/u/104742158?v=
 const DATA = [
   {
     id: 1,
-    title: 'Música',
+    title: 'Theme genre music',
   },
   {
     id: 2,
-    title: 'Música',
+    title: 'Artista',
   },
   {
     id: 3,
-    title: 'Música',
+    title: 'Playlist',
   },
 
   {
     id:4,
-    title: 'Música',
+    title: 'Artista',
   },
 
   {
     id:5,
-    title: 'Música',
+    title: 'Artista',
   },
 
   {
     id:6,
-    title: 'Música',
+    title: 'Playlist',
   },
 
   {
     id:7,
-    title: 'Música',
+    title: 'Theme genre music',
   },
 
   {
     id:8,
-    title: 'Música',
+    title: 'Playlist',
   },
 ];
 
 const Item = ({ title }) => (
     <View style={S.item}>
       <Image style={S.image} source={{uri: imageProfileGithub}}/>
+      
       <Text style={S.title}>{title}</Text>
     </View>
 );
 
+const Item2 = ({ title }) => (
+  <View style={S.item}>
+    <Image style={S.image2} source={{uri: imageProfileGithub }}/>
+    <Text style={S.title}>{title}</Text>
+  </View>
+);
+
+const Item3 = ({ title }) => (
+  <View style={S.item}>
+    <View style={S.image3Orientation}>
+      <Image style={S.image3} source={{uri: imageProfileGithub }}/>
+      <Image style={S.image3} source={{uri: imageProfileGithub }}/>
+    </View>
+    <View style={S.image3Orientation}>
+      <Image style={S.image3} source={{uri: imageProfileGithub }}/>
+      <Image style={S.image3} source={{uri: imageProfileGithub }}/>
+    </View>
+    <Text style={S.title}>{title}</Text>
+  </View>
+  
+);
+
 const PlayRecents = () => {
-    const renderItem = ({ item }) => (
-        <Item title={item.title}/> || <Item2 title={item2.title}/>
-      );
+    const renderItem = ({ item }) => {
+      if (item.title == 'Playlist'){
+        return <Item2 title={item.title}/>
+      } else if (item.title == 'Theme genre music'){
+        return <Item3 title={item.title}/>
+      } else return <Item title={item.title}/>        
+    };
 
     return(
         <View style={S.titleContainer}>
