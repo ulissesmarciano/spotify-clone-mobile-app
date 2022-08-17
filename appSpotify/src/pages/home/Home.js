@@ -13,6 +13,7 @@ import MyPlaylistsSection from "./components/myplaylists/myplaylists.js";
 import NewReleasesSection from "./components/releases/releases.js";
 import FanOfSection from "./components/fanof/fanof.js";
 import ParadeSection from "./components/parade/parade.js";
+import BestOfArtistsSection from "./components/bestofartists/bestofartists.js";
 
 
 const colorDefault = '#rgb(18, 18, 18)';
@@ -34,6 +35,7 @@ const Home = () => {
                 <NewReleasesSection />
                 <FanOfSection />
                 <ParadeSection />
+                <BestOfArtistsSection />
             </ScrollView>
         </SafeAreaView>
     );
