@@ -2,9 +2,11 @@ import React from "react";
 import { View, Text } from "react-native";
 
 const Search = () => {
-    <View>
-        <Text>Biblioteca</Text>
-    </View>
+    return (
+        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        <Text style={{color: 'black', fontWeight: 'bold', fontSize: 40 }}>Search!</Text>
+        </View>
+    );
 };
 
 export default Search;

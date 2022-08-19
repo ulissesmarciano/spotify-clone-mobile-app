@@ -7,6 +7,7 @@ import { createBottomTabNavigator} from "@react-navigation/bottom-tabs";
 
 import Home from "../pages/home/Home.js";
 import Library from "../pages/library/Library";
+import Search from "../pages/search/Search.js";
 
 function HomeScreen() {
     return (
@@ -16,9 +17,7 @@ function HomeScreen() {
   
 function SearchScreen() {
 return (
-  <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-  <Text style={{color: 'black', fontWeight: 'bold', fontSize: 40 }}>Search!</Text>
-  </View>
+  <Search />
 );
 }
 

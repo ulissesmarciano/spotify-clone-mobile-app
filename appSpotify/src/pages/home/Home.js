@@ -1,5 +1,5 @@
 import React from "react";
-import { SafeAreaView, StyleSheet, ScrollView, StatusBar } from "react-native";
+import { View, SafeAreaView, StyleSheet, ScrollView, StatusBar } from "react-native";
 
 import RecentSection from "./components/recent/recent.js";
 import PodcastSection from "./components/podcast/podcast.js";
@@ -14,6 +14,7 @@ import NewReleasesSection from "./components/releases/releases.js";
 import FanOfSection from "./components/fanof/fanof.js";
 import ParadeSection from "./components/parade/parade.js";
 import BestOfArtistsSection from "./components/bestofartists/bestofartists.js";
+import BottonSection from "./components/bottoncontainer/botton.js";
 
 
 const colorDefault = '#rgb(18, 18, 18)';
@@ -36,6 +37,7 @@ const Home = () => {
                 <FanOfSection />
                 <ParadeSection />
                 <BestOfArtistsSection />
+                <BottonSection />
             </ScrollView>
         </SafeAreaView>
     );
@@ -46,7 +48,7 @@ export const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: colorDefault,
-    }
+    },    
 });
 
 export default Home;
