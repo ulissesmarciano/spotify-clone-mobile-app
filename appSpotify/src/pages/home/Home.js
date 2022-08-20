@@ -1,5 +1,5 @@
 import React from "react";
-import { View, SafeAreaView, StyleSheet, ScrollView, StatusBar } from "react-native";
+import { SafeAreaView, StyleSheet, ScrollView, StatusBar } from "react-native";
 
 import RecentSection from "./components/recent/recent.js";
 import PodcastSection from "./components/podcast/podcast.js";
