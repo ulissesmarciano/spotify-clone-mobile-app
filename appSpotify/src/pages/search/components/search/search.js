@@ -1,12 +1,18 @@
 import React from "react";
 import { View, Text, TouchableOpacity, Image } from "react-native";
-import S from "./styled.js"
 
-const SearchSection = () => {
+import { useNavigation } from '@react-navigation/native';
+
+import S from "./styled.js";
+
+
+
+export default function SearchSection () {
+    const navigation = useNavigation(); 
     return(
         <View style={S.headContainer}>
             <Text style={S.titleSection}>Buscar</Text>
-            <TouchableOpacity style={S.inputStyle} >
+            <TouchableOpacity style={S.inputStyle} onPress={() => navigation.navigate('Details')}>
                 <Image style={S.bottomImage} source={require('./icons/search.png')} />
                 <Text style={S.placeHolderText}>O que você quer ouvir?</Text>
             </TouchableOpacity>           
@@ -16,4 +22,3 @@ const SearchSection = () => {
 };
 
 
-export default SearchSection;

@@ -18,20 +18,21 @@ export default StyleSheet.create({
         alignItems: 'center',
         marginTop: 35,
         marginRight: 15,
-        height: 45,
+        height: 50,
+        borderRadius: 4,
     },
 
     bottomImage: {
         marginLeft: 15,
-        height: 20,
-        width: 20,
+        height: 25,
+        width: 25,
         tintColor: '#rgb(18, 18, 18)',
     },
 
     placeHolderText: {
         color: '#rgb(110, 110, 110)',
         fontWeight: 'bold',
-        fontSize: 18,
+        fontSize: 20,
         marginLeft: 15,
     },
 });

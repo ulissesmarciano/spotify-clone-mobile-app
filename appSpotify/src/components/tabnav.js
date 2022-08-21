@@ -1,37 +1,61 @@
 import React from "react";
-import { View, Text, Image } from "react-native";
+import { View, Image } from "react-native";
+
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator} from "@react-navigation/bottom-tabs";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 
 
 import Home from "../pages/home/Home.js";
 import Library from "../pages/library/Library";
-import Search from "../pages/search/Search.js";
+import Explorer from "../pages/search/Explorer.js";
+import SearchPlaceSection from "../pages/search/components/search/subpages/searchplace/searchplace.js";
+
+
 
 function HomeScreen() {
     return (
       <Home/>
     );
 }
-  
-function SearchScreen() {
-return (
-  <Search />
-);
+
+function ExplorerScreen() {
+  return (
+    <Explorer />
+  );
 }
+
 
 function LibraryScreen() {
 return (
     <Library />
 );
 }
+
+const ExplorerStack = createNativeStackNavigator();
+
+function ExplorerStackScreen() {
+  return (
+    <ExplorerStack.Navigator>
+      <ExplorerStack.Screen      
+      name="Buscar" 
+      component={ExplorerScreen} 
+      options={{
+        title: ' ',
+        headerTransparent: true,
+      }} 
+    />
+      <ExplorerStack.Screen name="Details" component={SearchPlaceSection} />
+    </ExplorerStack.Navigator>
+  );
+}
   
 const Tab = createBottomTabNavigator();
 
 export default function TabNav() {
   return (
-    <NavigationContainer >
+    <NavigationContainer >     
       <Tab.Navigator                    
           screenOptions={() => ({
               headerShown: false,
@@ -71,7 +95,7 @@ export default function TabNav() {
           />
         <Tab.Screen
               name="Buscar"
-              component={SearchScreen}
+              component={ExplorerStackScreen}
               options={{
                 tabBarIcon: ({focused}) => (
                   <View>

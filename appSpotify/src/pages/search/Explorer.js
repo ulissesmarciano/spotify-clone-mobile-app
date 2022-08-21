@@ -6,7 +6,7 @@ import BottomSection from "./components/bottomcontainer/bottom";
 
 const colorDefault = '#rgb(18, 18, 18)';
 
-const Search = () => {
+const Explorer = () => {
     return (
         <SafeAreaView style={styles.container}>
         <StatusBar barStyle="light-content" backgroundColor= "black" />
@@ -18,7 +18,7 @@ const Search = () => {
     );
 };
 
-export default Search;
+export default Explorer;
 
 export const styles = StyleSheet.create({
     container: {
