@@ -1,10 +1,9 @@
 import React from "react";
-import { View, Text, TouchableOpacity, Image } from "react-native";
+import { View, Text, TouchableOpacity, Image, ImageBackground } from "react-native";
 
 import { useNavigation } from '@react-navigation/native';
 
 import S from "./styled.js";
-
 
 
 export default function SearchSection () {
@@ -15,7 +14,7 @@ export default function SearchSection () {
             <TouchableOpacity style={S.inputStyle} onPress={() => navigation.navigate('Details')}>
                 <Image style={S.bottomImage} source={require('./icons/search.png')} />
                 <Text style={S.placeHolderText}>O que você quer ouvir?</Text>
-            </TouchableOpacity>           
+            </TouchableOpacity>                       
         </View>
 
     );

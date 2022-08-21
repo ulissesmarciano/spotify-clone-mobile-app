@@ -3,6 +3,7 @@ import { SafeAreaView, StatusBar, ScrollView, StyleSheet } from "react-native";
 
 import SearchSection from "./components/search/search";
 import BottomSection from "./components/bottomcontainer/bottom";
+import GenreSection from "./components/genre/genre";
 
 const colorDefault = '#rgb(18, 18, 18)';
 
@@ -12,6 +13,7 @@ const Explorer = () => {
         <StatusBar barStyle="light-content" backgroundColor= "black" />
             <ScrollView>
                 <SearchSection />
+                <GenreSection />
                 <BottomSection />
             </ScrollView>
         </SafeAreaView>

@@ -1,3 +1,9 @@
+/*
+PENDÊNCIAS: iniciar sempre que clicar no bottom button a página ExplorerScreen. 
+Quando inicio e navego a página ExplorerStackScreen ela fica aberta.
+
+*/
+
 import React from "react";
 import { View, Image } from "react-native";
 
@@ -39,14 +45,25 @@ function ExplorerStackScreen() {
   return (
     <ExplorerStack.Navigator>
       <ExplorerStack.Screen      
-      name="Buscar" 
+      name="Explorer" 
       component={ExplorerScreen} 
       options={{
         title: ' ',
         headerTransparent: true,
       }} 
     />
-      <ExplorerStack.Screen name="Details" component={SearchPlaceSection} />
+      <ExplorerStack.Screen 
+      name="Details" 
+      component={SearchPlaceSection}
+      options={{
+        title: ' ',
+        headerTransparent: true,
+        headerBackVisible: false,
+        headerSearchBarOptions: {
+          // search bar options
+        } 
+      }}  
+      />
     </ExplorerStack.Navigator>
   );
 }
@@ -56,18 +73,18 @@ const Tab = createBottomTabNavigator();
 export default function TabNav() {
   return (
     <NavigationContainer >     
-      <Tab.Navigator                    
-          screenOptions={() => ({
+      <Tab.Navigator
+          screenOptions={() => ({    
+              tabBarHideOnKeyboard:true,
+              tabBarVisibilityAnimationConfig: false,              
               headerShown: false,
               tabBarStyle: {
                 height: 65,
                 paddingHorizontal: 1,
                 backgroundColor: 'rgba(1, 1, 1, 0.9)',
                 position: 'absolute',
-                borderTopWidth: 0,
-                
+                borderTopWidth: 0,                              
               },
-
               tabBarActiveTintColor: "white",
               tabBarInactiveTintColor: "#rgb(177, 177, 177)",
               tabBarLabelStyle: {
@@ -76,7 +93,7 @@ export default function TabNav() {
           })} 
           
           >
-        <Tab.Screen
+      <Tab.Screen
               name="Início"
               component={HomeScreen}
               options={{                    
