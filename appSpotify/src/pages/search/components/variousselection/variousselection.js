@@ -3,7 +3,7 @@ import { View, Text, ImageBackground } from 'react-native';
 
 import S from './styled.js'
 
-const GenreSection = () => {
+const PodcastCategorySection = () => {
     return (
         
         <View>
@@ -12,22 +12,22 @@ const GenreSection = () => {
             </View>
             <View style={S.imageContainer}>
                 <ImageBackground 
-                style={S.content}
+                style={S.item}
                 imageStyle={{ borderRadius: 4}} 
-                source={require('./backimages/pop.png')}
+                source={require('./backimages/lancamentospodcast.png')}
                 >
-                    <Text>Pop</Text>
+                    <Text style={S.textItem}>Lança-{'\n'}mentos de{'\n'}Podcast</Text>
                 </ImageBackground>
                 <ImageBackground 
-                style={S.content} 
+                style={S.item} 
                 imageStyle={{ borderRadius: 4}} 
-                source={require('./backimages/randb.png')}
+                source={require('./backimages/playnovoto.png')}
                 >
-                    <Text>R&B</Text>
+                    <Text style={S.textItem}>Play no Voto</Text>
                 </ImageBackground>
             </View>
         </View>
     );
 };
 
-export default GenreSection;
+export default PodcastCategorySection;

@@ -3,9 +3,9 @@ import { StyleSheet } from 'react-native';
 export default StyleSheet.create({
     title:{
         color: 'white',
-        fontSize: 22,
+        fontSize: 18,
         fontWeight: 'bold',
-        marginTop: 15,
+        marginTop: 20,
         marginLeft: 15,
     },
 
@@ -16,8 +16,15 @@ export default StyleSheet.create({
         justifyContent: 'space-between',
     },
 
-    content: {
+    item: {
         width: 175,
         height: 100,
+    },
+
+    textItem: {
+        color: 'white',
+        fontSize: 18,
+        fontWeight: 'bold',
+        margin: 5,
     },
 });
