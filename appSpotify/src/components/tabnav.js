@@ -16,7 +16,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Home from "../pages/home/Home.js";
 import Library from "../pages/library/Library";
 import Explorer from "../pages/search/Explorer.js";
-import SearchPlaceSection from "../pages/search/components/search/subpages/searchplace/searchplace.js";
+import SearchPlaceSection from "../pages/search/subpages/searchplace/searchplace.js";
 
 
 
@@ -58,10 +58,7 @@ function ExplorerStackScreen() {
       options={{
         title: ' ',
         headerTransparent: true,
-        headerBackVisible: false,
-        headerSearchBarOptions: {
-          // search bar options
-        } 
+        headerBackVisible: false,         
       }}  
       />
     </ExplorerStack.Navigator>
