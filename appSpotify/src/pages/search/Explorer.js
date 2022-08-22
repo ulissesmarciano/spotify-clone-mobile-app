@@ -5,6 +5,7 @@ import SearchSection from "./components/search/search";
 import BottomSection from "./components/bottomcontainer/bottom";
 import GenreSection from "./components/genre/genre";
 import PodcastCategorySection from "./components/podcastcategory/podcastcategory.js";
+import VariousSection from "./components/variousselection/variousselection";
 
 const colorDefault = '#rgb(18, 18, 18)';
 
@@ -16,6 +17,7 @@ const Explorer = () => {
                 <SearchSection />
                 <GenreSection />
                 <PodcastCategorySection />
+                <VariousSection />
                 <BottomSection />
             </ScrollView>
         </SafeAreaView>
