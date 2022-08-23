@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, FlatList, Text, Image, SafeAreaView } from 'react-native';
+import { View, FlatList, Text, Image, ScrollView } from 'react-native';
 import S from './syled.js';
 
 const mockedImage = 'https://avatars.githubusercontent.com/u/104742158?v=4';
@@ -47,6 +47,31 @@ const DATA = [
     },
     {
       id: 9,
+      title: 'Nome da Playlist',
+      subtitle: 'Playlist',
+    },
+    {
+      id: 10,
+      title: 'Nome do Artista',
+      subtitle: 'Artista',
+    },
+    {
+      id: 11,
+      title: 'Nome da Playlist',
+      subtitle: 'Playlist',
+    },
+    {
+      id: 12,
+      title: 'Música',
+      subtitle: 'Música - Artista',
+    },
+    {
+      id: 13,
+      title: 'Nome do Artista',
+      subtitle: 'Artista',
+    },
+    {
+      id: 15,
       title: 'Nome da Playlist',
       subtitle: 'Playlist',
     },
@@ -101,13 +126,14 @@ const RecentSearchSection = () => {
 
     }; 
     return (
-        <View>
+        <ScrollView>
+          <Text style={S.titlePage} >Buscas recentes</Text>
             <FlatList
             data={DATA}
             renderItem={renderItem}
           keyExtractor={item => item.id}
             />
-        </View>
+        </ScrollView>
     );
 };
 
