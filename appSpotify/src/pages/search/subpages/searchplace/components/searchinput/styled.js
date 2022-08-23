@@ -1,11 +1,6 @@
 import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
-    container: {
-        flex:1,
-        backgroundColor: '#rgb(18, 18, 18)',
-    },
-
     backInputStyle: {
         backgroundColor: '#rgb(41, 41, 41)',
         height: 70,

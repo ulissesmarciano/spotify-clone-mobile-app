@@ -1,25 +1,22 @@
-import React from "react";
-import { SafeAreaView, View, TextInput, Image } from "react-native";
-import S from "./styled.js";
+import React from 'react';
+import { SafeAreaView, StyleSheet } from 'react-native';
 
+import SearchInputSection from './components/searchinput/searchinput';
+import RecentSearchSection from './components/recentsearch/recentsearch';
 
 export default function SearchPlaceSection () {
-    return (
-        <SafeAreaView style={S.container}>
-            <View style={S.backInputStyle}>
-                <View style={S.sectionStyle}>
-                <TextInput 
-                    style={S.textInputStyle} 
-                    placeholder="O que você quer ouvir?"
-                    placeholderTextColor="white" 
-                /> 
-                <Image 
-                    source={require('./icons/photo.png')} 
-                    style={S.imageInputStyle} 
-                /> 
-                </View>
-            </View>           
+    return(
+        <SafeAreaView style={styles.container}>
+            <SearchInputSection />
+            <RecentSearchSection />
         </SafeAreaView>
     );
 };
+
+export const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: '#rgb(18, 18, 18)',
+    }
+});
 

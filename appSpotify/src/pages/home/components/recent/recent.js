@@ -2,12 +2,12 @@ import React from 'react';
 import { View, Text, Image } from 'react-native';
 import S from './styled';
 
-const imageProfileGithub = 'https://avatars.githubusercontent.com/u/104742158?v=4';
+const mockedImage = 'https://avatars.githubusercontent.com/u/104742158?v=4';
 
 const RecentContainer = ({title}) => {
     return (
         <View style={S.recentItem}>
-            <Image style={S.imageContainer} source={{uri:imageProfileGithub}}/>
+            <Image style={S.imageContainer} source={{uri:mockedImage}}/>
             <Text style={S.textBox}>{title}</Text>
         </View>
     );
@@ -38,7 +38,7 @@ const RecentSection = () => {
                 </View>
             </View>
             <View>
-                <Image source={{uri: imageProfileGithub}}/>
+                <Image source={{uri: mockedImage}}/>
             </View>
         </View>
     </View>
