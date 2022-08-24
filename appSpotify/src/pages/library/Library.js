@@ -1,15 +1,25 @@
-import React from "react";
-import { View, Text } from "react-native";
+import React from 'react';
+import { SafeAreaView, StyleSheet } from 'react-native';
+
+import HeadSection from './components/headlibrary/headlibrary.js';
+
 
 const colorDefault = '#rgb(18, 18, 18)';
 
 const Library = () => {
     return(
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text style={{color: 'black', fontWeight: 'bold', fontSize: 40 }}>Library!</Text>
-        </View>
+        <SafeAreaView style={styles.container}>
+        <HeadSection />
+        </SafeAreaView>
     );
 };
 
 export default Library;
+
+export const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: colorDefault,
+    }
+})
 
