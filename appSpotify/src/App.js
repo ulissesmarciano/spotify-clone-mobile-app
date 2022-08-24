@@ -1,11 +1,11 @@
 import React from "react";
 
-import TabNav from "./components/tabnav";
+import Routes from "./Routes";
 
 
 const App = () => {
   return(
-    <TabNav />
+    <Routes />
   );
 };
 

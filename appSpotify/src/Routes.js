@@ -13,10 +13,10 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 
 
-import Home from "../pages/home/Home.js";
-import Library from "../pages/library/Library";
-import Explorer from "../pages/search/Explorer.js";
-import SearchPlaceSection from "../pages/search/subpages/searchplace/searchplace.js";
+import Home from "./pages/home/Home.js";
+import Library from "./pages/library/Library";
+import Explorer from "./pages/search/Explorer.js";
+import SearchPlaceSection from "./pages/search/subpages/searchplace/searchplace.js";
 
 
 
@@ -67,7 +67,7 @@ function ExplorerStackScreen() {
   
 const Tab = createBottomTabNavigator();
 
-export default function TabNav() {
+export default function Routes() {
   return (
     <NavigationContainer >     
       <Tab.Navigator
@@ -96,7 +96,7 @@ export default function TabNav() {
               options={{                    
                   tabBarIcon: ({focused}) => (
                     <View>
-                      <Image source={focused ? require('./icons/homeselected.png') : require('./icons/home.png')}
+                      <Image source={focused ? require('./components/icons/homeselected.png') : require('./components/icons/home.png')}
                       resizeMode="contain" 
                       style={{
                         width: 25,
@@ -113,7 +113,7 @@ export default function TabNav() {
               options={{
                 tabBarIcon: ({focused}) => (
                   <View>
-                    <Image source={focused ? require('./icons/searchselected.png') : require('./icons/search.png')}
+                    <Image source={focused ? require('./components/icons/searchselected.png') : require('./components/icons/search.png')}
                     resizeMode="contain"
                     style={{
                       width: 25,
@@ -131,7 +131,7 @@ export default function TabNav() {
               options={{
                 tabBarIcon: ({focused}) => (
                   <View>
-                    <Image source={focused ? require('./icons/libsselected.png') : require('./icons/libs.png')}
+                    <Image source={focused ? require('./components/icons/libsselected.png') : require('./components/icons/libs.png')}
                     resizeMode="contain"
                     style={{
                       width: 25,
