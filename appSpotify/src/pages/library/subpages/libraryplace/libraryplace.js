@@ -1,19 +1,14 @@
 import React from 'react';
 import { SafeAreaView, View, TextInput, Image, StyleSheet } from 'react-native';
 
+import SearchLibraryInput from './components/searchlibraryinput';
+
 const colorDefault = '#rgb(18, 18, 18)';
 
 export default function LibraryPlace() {
     return (
         <SafeAreaView style={styles.container} >
-            <View style={styles.headContainer}>
-                <Image style={styles.backImage} source={require('./icons/backpageicon.png')} />
-                <TextInput 
-                style={styles.textInput} 
-                placeholder='Busque na Sua Biblioteca'
-                placeholderTextColor={'#rgb(169, 169, 169)'}                
-                />
-            </View>
+            <SearchLibraryInput />
         </SafeAreaView>
     );
 };
