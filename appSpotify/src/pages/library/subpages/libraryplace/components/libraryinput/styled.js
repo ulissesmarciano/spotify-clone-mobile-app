@@ -4,7 +4,10 @@ export default StyleSheet.create({
     headContainer:{
         flexDirection: 'row',
         alignItems: 'center',  
-        margin: 25,
+        marginTop: 25,
+        marginLeft: 20,
+        marginRight: 20,
+        marginBottom: 20,
         justifyContent: 'space-between',     
     },
 
@@ -21,5 +24,10 @@ export default StyleSheet.create({
         height: 40,
         borderRadius: 6,
         paddingLeft: 15,
-    }    
+    },
+    
+    linerDivisioner: {
+        backgroundColor: '#rgb(12, 12, 12)',
+        height: 4,
+    }
 });

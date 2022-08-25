@@ -1,14 +1,18 @@
 import React from 'react';
-import { SafeAreaView, View, TextInput, Image, StyleSheet } from 'react-native';
+import { SafeAreaView, ScrollView, StyleSheet } from 'react-native';
 
 import SearchLibraryInput from './components/libraryinput/searchlibraryinput';
+import LibraryPlaceSection from './components/libraryplaceresults/libraryplaceresults';
 
 const colorDefault = '#rgb(18, 18, 18)';
 
 export default function LibraryPlace() {
     return (
         <SafeAreaView style={styles.container} >
-            <SearchLibraryInput />
+            <ScrollView>
+                <SearchLibraryInput />
+                <LibraryPlaceSection />
+            </ScrollView>
         </SafeAreaView>
     );
 };
