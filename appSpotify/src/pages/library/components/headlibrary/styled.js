@@ -3,8 +3,9 @@ import { StyleSheet } from 'react-native';
 export default StyleSheet.create({
     container: {
         flexDirection: 'row',
-        marginTop: 22,
-        margin: 8,
+        marginTop: 28,
+        marginLeft: 10,
+        marginRight: 10,
     },
 
     profileImage: {
