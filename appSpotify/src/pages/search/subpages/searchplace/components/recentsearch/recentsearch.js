@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, FlatList, Text, Image, ScrollView } from 'react-native';
+import { View, FlatList, Text, Image } from 'react-native';
 import S from './syled.js';
 
 const mockedImage = 'https://avatars.githubusercontent.com/u/104742158?v=4';
@@ -126,14 +126,14 @@ const RecentSearchSection = () => {
 
     }; 
     return (
-        <ScrollView>
+        <View>
           <Text style={S.titlePage} >Buscas recentes</Text>
             <FlatList
             data={DATA}
             renderItem={renderItem}
           keyExtractor={item => item.id}
             />
-        </ScrollView>
+        </View>
     );
 };
 

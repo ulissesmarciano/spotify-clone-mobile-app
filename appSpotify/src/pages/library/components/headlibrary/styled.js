@@ -6,6 +6,7 @@ export default StyleSheet.create({
         marginTop: 28,
         marginLeft: 10,
         marginRight: 10,
+        height: 35,
     },
 
     profileImage: {
@@ -21,16 +22,19 @@ export default StyleSheet.create({
         marginLeft: 4,
     },
 
-    imagesIconContainer: {
-        flexDirection: 'row',
+    buttonContainer: {
         flex: 1,
+        height: 35,
+        flexDirection: 'row',
         justifyContent: 'flex-end',
-    },
+        alignItems: 'center',
+    },   
 
     iconsHead: {
-        marginLeft: 30,
         height: 25,
         width: 25,
-        alignSelf: 'center',
+        marginLeft: 30,
+        marginRight: 10,
     },
+
 });

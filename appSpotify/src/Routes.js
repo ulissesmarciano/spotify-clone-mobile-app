@@ -15,6 +15,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import Home from "./pages/home/Home.js";
 import Library from "./pages/library/Library";
+import LibraryPlace from "./pages/library/subpages/libraryplace/libraryplace.js";
 import Explorer from "./pages/search/Explorer.js";
 import SearchPlaceSection from "./pages/search/subpages/searchplace/searchplace.js";
 
@@ -51,7 +52,7 @@ function ExplorerStackScreen() {
         title: ' ',
         headerTransparent: true,
       }} 
-    />
+      />
       <ExplorerStack.Screen 
       name="Details" 
       component={SearchPlaceSection}
@@ -60,11 +61,40 @@ function ExplorerStackScreen() {
         headerTransparent: true,
         headerBackVisible: false,         
       }}  
-      />
+      />      
     </ExplorerStack.Navigator>
   );
 }
-  
+
+
+const LibraryStack = createNativeStackNavigator();
+
+function LibraryStackScreen() {
+  return (
+    <LibraryStack.Navigator>      
+      <LibraryStack.Screen 
+      name="Biblioteca"
+      component={LibraryScreen}
+      options={{
+        title: ' ',
+        headerTransparent: true,
+        headerBackVisible: false,         
+      }}  
+      />
+      <LibraryStack.Screen 
+      name="Detalhes" 
+      component={LibraryPlace}      
+      options={{
+        title: ' ',
+        headerTransparent: true,
+        headerBackVisible: false,         
+      }}  
+      />  
+    </LibraryStack.Navigator>
+  );
+}
+
+
 const Tab = createBottomTabNavigator();
 
 export default function Routes() {
@@ -127,7 +157,7 @@ export default function Routes() {
           />
         <Tab.Screen
               name="Sua Biblioteca"
-              component={LibraryScreen}
+              component={LibraryStackScreen}
               options={{
                 tabBarIcon: ({focused}) => (
                   <View>
