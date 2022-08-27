@@ -19,7 +19,7 @@ import BottonSection from "./components/bottoncontainer/botton.js";
 
 const colorDefault = '#rgb(18, 18, 18)';
 
-const Home = () => {
+export default function Home(){
     return (
         <SafeAreaView style={styles.container}>
         <StatusBar barStyle="light-content" backgroundColor= "black" />
@@ -51,4 +51,3 @@ export const styles = StyleSheet.create({
     },    
 });
 
-export default Home;

@@ -1,6 +1,10 @@
 import React from 'react';
-import { View, Text, Image } from 'react-native';
+import { View, Text, Image, TouchableOpacity } from 'react-native';
+
 import S from './styled';
+
+import { useNavigation } from '@react-navigation/native';
+
 
 const mockedImage = 'https://avatars.githubusercontent.com/u/104742158?v=4';
 
@@ -13,7 +17,9 @@ const RecentContainer = ({title}) => {
     );
 };
 
-const RecentSection = () => {
+export default function RecentSection(){
+    const navigation = useNavigation();
+
     return (
     <View>
         <View >
@@ -27,14 +33,26 @@ const RecentSection = () => {
             </View>
             <View style={S.boxContent}>
                 <View>
-                    <RecentContainer title="teste"/>
-                    <RecentContainer title="teste"/>
-                    <RecentContainer title="teste"/>
+                    <TouchableOpacity onPress={() => navigation.navigate("Track Player")}>
+                        <RecentContainer title="teste"/>
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate("Track Player")}>
+                        <RecentContainer title="teste"/>
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate("Track Player")}>
+                        <RecentContainer title="teste"/>
+                    </TouchableOpacity>                    
                 </View>
                 <View>
-                    <RecentContainer title="teste"/>
-                    <RecentContainer title="teste"/>
-                    <RecentContainer title="teste"/>
+                    <TouchableOpacity onPress={() => navigation.navigate("Track Player")}>
+                        <RecentContainer title="teste"/>
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate("Track Player")}>
+                        <RecentContainer title="teste"/>
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate("Track Player")}>
+                        <RecentContainer title="teste"/>
+                    </TouchableOpacity>
                 </View>
             </View>
             <View>
@@ -44,4 +62,3 @@ const RecentSection = () => {
     </View>
     );
 };
-export default RecentSection;

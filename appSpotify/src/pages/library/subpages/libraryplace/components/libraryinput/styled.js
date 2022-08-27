@@ -29,5 +29,11 @@ export default StyleSheet.create({
     linerDivisioner: {
         backgroundColor: '#rgb(12, 12, 12)',
         height: 4,
+    },
+
+    test: {
+        height: 50,
+        width: 50,
+        justifyContent: 'center',
     }
 });

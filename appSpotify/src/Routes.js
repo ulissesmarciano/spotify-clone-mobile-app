@@ -19,6 +19,8 @@ import LibraryPlace from "./pages/library/subpages/libraryplace/libraryplace.js"
 import Explorer from "./pages/search/Explorer.js";
 import SearchPlaceSection from "./pages/search/subpages/searchplace/searchplace.js";
 
+import TrackPlayer from "./pages/trackplayer/trackplayer.js";
+
 
 
 function HomeScreen() {
@@ -39,6 +41,35 @@ return (
     <Library />
 );
 }
+
+const TrackPlayerStack = createNativeStackNavigator();
+
+function TrackPlayerStackScreen() {
+  return(
+  <TrackPlayerStack.Navigator>
+    <TrackPlayerStack.Screen 
+    name="Home"
+    component={HomeScreen}
+    options={{
+      title: ' ',
+      headerTransparent: true,
+      headerBackTitleVisible: false,
+    }}
+    />
+
+    <TrackPlayerStack.Screen 
+    name="Track Player"
+    component={TrackPlayer}
+    options={{
+      title: ' ',
+      headerTransparent: true,
+      headerBackVisible: false,     
+    }}
+    />
+  </TrackPlayerStack.Navigator>
+  );
+}
+
 
 const ExplorerStack = createNativeStackNavigator();
 
@@ -122,7 +153,7 @@ export default function Routes() {
           >
       <Tab.Screen
               name="Início"
-              component={HomeScreen}
+              component={TrackPlayerStackScreen}
               options={{                    
                   tabBarIcon: ({focused}) => (
                     <View>
