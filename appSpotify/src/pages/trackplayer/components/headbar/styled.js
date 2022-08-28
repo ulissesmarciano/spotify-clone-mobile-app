@@ -1,18 +1,37 @@
-import styled from 'styled-components';
+import { StyleSheet } from 'react-native';
 
+export default StyleSheet.create({
+   container: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginTop: 25,
+    marginLeft: 15,
+    marginRight: 15,
+    height: 50,
+   },
+   
+   image: {
+    height: 20,
+    width: 20,
+   },
 
+   imageContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+   },
 
-export const Background = styled.View`
-flex: 1;
-background-color: grey;
-`;
+   midleText: {
+    alignItems: 'center',
+    justifyContent: 'center',
+   },
 
-export const TopBar = styled.View``;
+   title: {
+    color: '#rgb(230, 230, 230)',
+    textTransform: 'uppercase',
+   },
 
-TopBar.Title = styled.Text`
-color: white;
-`;
-TopBar.Subtitle = styled.Text`
-color: white;
-`;
-
+   subtitle: {
+    color: 'white',
+    fontWeight: 'bold',
+   }
+});
