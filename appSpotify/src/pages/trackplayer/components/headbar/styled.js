@@ -8,6 +8,7 @@ export default StyleSheet.create({
     marginLeft: 15,
     marginRight: 15,
     height: 50,
+    flex: 1,
    },
    
    image: {

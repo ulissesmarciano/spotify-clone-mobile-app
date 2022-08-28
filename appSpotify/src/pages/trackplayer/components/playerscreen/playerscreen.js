@@ -1,10 +1,20 @@
 import React from 'react';
-import { View, Text, ViewBase } from 'react-native';
+import { View } from 'react-native';
+
+import S from './styled.js';
 
 const PlayerScreen = () => {
     return(
         <View>
-            <Text style={{fontSize: 36, fontWeight: 'bold'}}>Olá</Text>
+            <View style={S.screenContainer}>
+                <View style={S.coverScreen} ></View>
+            </View>
+            <View style={S.buttonPlayerContainer}>
+                <View style={S.buttonPlayerScreen} ></View>
+            </View>
+            <View style={S.lyricsContainer}>
+
+            </View>
         </View>
     );
 };
