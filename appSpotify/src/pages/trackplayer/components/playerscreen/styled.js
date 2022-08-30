@@ -19,7 +19,7 @@ export default StyleSheet.create({
     },
 
     buttonPlayerScreen: {
-        marginTop: 25,
+        marginTop: 20,
         width: 330,
         height: 220,
     },
@@ -49,6 +49,7 @@ export default StyleSheet.create({
     },
 
     timeContainer: {
+        marginTop: 0,
         flexDirection: 'row',
         justifyContent: 'space-between',
     },
@@ -64,17 +65,53 @@ export default StyleSheet.create({
         justifyContent: 'center',
     },
 
-    sliderStyle: {
-        
+    controlArea: {
+        flex: 3,        
     },
 
-    controlArea: {
-        backgroundColor: 'red',
-        flex: 3,
+    buttonTrackArea: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+    },
+
+    borderControllers: {
+        height: 30,
+        width: 30,
+    },
+
+    trackButton: {
+        height: 30,
+        width: 30,
+    },
+
+    playButton: {
+        height: 70,
+        width: 70,
+    },
+
+    shareIcons:{
+        height: 20,
+        width: 20,
+    },
+
+    shareControls: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+    },
+
+    dispositiveOrientation: {
+        flex: 4,
+    },
+
+    shareListOrientation: {
+        flex: 1,
+        justifyContent: 'space-between',
+        flexDirection: 'row',
     },
 
     lyricsContainer: {
         height: 500,
         backgroundColor: 'blue',
-    }
+    },
 });

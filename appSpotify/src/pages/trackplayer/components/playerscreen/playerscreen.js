@@ -34,13 +34,8 @@ export default function PlayerScreen () {
                         {!alternateImage && <Image source={LikedImg} style={S.likeIcon}/>}
                         </TouchableOpacity>                       
                     </View>
-                    <View style={S.timeContainer}>
-                        <Text style={S.timeStyle}>0:01</Text>
-                        <Text style={S.timeStyle}>6:21</Text>
-                    </View>
-                    
+                    <View style={S.sliderContainer} >
                         <Slider 
-                        style={S.sliderStyle}
                         minimumValue={0}
                         maximumValue={100}
                         thumbTintColor="#FFFFFF"
@@ -48,9 +43,28 @@ export default function PlayerScreen () {
                         maximumTrackTintColor="#BBBBBB"
                         mini
                         />
-                    
+                    </View>    
+                    <View style={S.timeContainer}>
+                        <Text style={S.timeStyle}>0:01</Text>
+                        <Text style={S.timeStyle}>6:21</Text>
+                    </View>                    
                     <View style={S.controlArea} >
-                        
+                        <View style={S.buttonTrackArea} >
+                            <Image style={S.borderControllers} source={require('./icons/randomicon.png')} />
+                            <Image style={S.trackButton} source={require('./icons/rwicon.png')} />
+                            <Image style={S.playButton} source={require('./icons/playicon.png')} />
+                            <Image style={S.trackButton} source={require('./icons/fwicon.png')} />
+                            <Image style={S.borderControllers} source={require('./icons/repeaticon.png')} />
+                        </View>
+                        <View style={S.shareControls}>
+                            <View style={S.dispositiveOrientation} >
+                                <Image style={S.shareIcons} source={require('./icons/playersicon.png')} />
+                            </View>
+                            <View style={S.shareListOrientation}>
+                                <Image style={S.shareIcons} source={require('./icons/shareicon.png')} />
+                                <Image style={S.shareIcons} source={require('./icons/listicon.png')} />
+                            </View>
+                        </View>
                     </View>
                 </View>
             </View>

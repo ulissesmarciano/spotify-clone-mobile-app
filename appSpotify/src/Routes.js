@@ -137,7 +137,7 @@ export default function Routes() {
               tabBarVisibilityAnimationConfig: false,              
               headerShown: false,
               tabBarStyle: {
-                height: 65,
+                height: 50,
                 paddingHorizontal: 1,
                 backgroundColor: 'rgba(1, 1, 1, 0.9)',
                 position: 'absolute',
@@ -146,7 +146,7 @@ export default function Routes() {
               tabBarActiveTintColor: "white",
               tabBarInactiveTintColor: "#rgb(177, 177, 177)",
               tabBarLabelStyle: {
-                fontSize: 14,
+                fontSize: 12,
               },
           })} 
           
@@ -160,8 +160,8 @@ export default function Routes() {
                       <Image source={focused ? require('./components/icons/homeselected.png') : require('./components/icons/home.png')}
                       resizeMode="contain" 
                       style={{
-                        width: 25,
-                        height: 25,
+                        width: 22,
+                        height: 22,
                       }}                      
                         />
                     </View>
@@ -177,8 +177,8 @@ export default function Routes() {
                     <Image source={focused ? require('./components/icons/searchselected.png') : require('./components/icons/search.png')}
                     resizeMode="contain"
                     style={{
-                      width: 25,
-                      height: 25,
+                      width: 22,
+                      height: 22,
                     }}                        
                       />
                   </View>
@@ -195,8 +195,8 @@ export default function Routes() {
                     <Image source={focused ? require('./components/icons/libsselected.png') : require('./components/icons/libs.png')}
                     resizeMode="contain"
                     style={{
-                      width: 25,
-                      height: 25,
+                      width: 22,
+                      height: 22,
                     }}                        
                       />
                   </View>
