@@ -13,8 +13,8 @@ export default function HeadBar() {
             <Image style={S.iconImage} source={ArrowIcon} />
         </TouchableOpacity>
         <View style={S.textContainer}>
-            <Text style={S.title}>TOCANDO DO ÁLBUM</Text>
-            <Text style={S.subtitle}>Nome da música</Text>
+            <Text style={S.title}>TOCANDO PODCAST</Text>
+            <Text style={S.subtitle}>Nome do Podcast</Text>
         </View>
         <TouchableOpacity style={S.buttonContainer}>
             <Image style={S.iconImage} source={OptionIcon} />
