@@ -109,9 +109,4 @@ export default StyleSheet.create({
         justifyContent: 'space-between',
         flexDirection: 'row',
     },
-
-    lyricsContainer: {
-        height: 500,
-        backgroundColor: 'blue',
-    },
 });

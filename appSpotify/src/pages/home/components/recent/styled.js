@@ -2,58 +2,80 @@ import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
     headContainer: {
-        marginTop: 35,
         flexDirection: 'row',
-        justifyContent: 'space-between',
+        marginTop: 30,
         marginLeft: 15,
-        marginRight:15,
+        marginRight: 15,
+        marginBottom: 10,
     },
 
-    titleRcent: {
+    title: {
+        alignSelf: 'center',
+        flex: 5,
         color: 'white',
-        fontSize: 34,
+        fontSize: 32,
         fontWeight: 'bold',
     },
 
-    iconsHeader: {
+    iconsContainer: {
         flexDirection: 'row',
-        minWidth: 120,
-        alignItems: 'center',
         justifyContent: 'space-between',
+        alignItems: 'center',
+        flex: 3,
     },
 
     iconSize: {
-        width: 30,
         height: 30,
+        width: 30,
     },
 
     boxContent: {
         flexDirection: 'row',
-        marginLeft: 13,
-        marginRight: 13,
         justifyContent: 'space-between',
+        marginLeft: 11,
+        marginRight: 11,
     },
 
-    recentItem: {
+    recentItemContainer: {
+        backgroundColor: '#rgb(48, 48, 48)',
+        flex: 1,
+        borderRadius: 6,
+        margin: 4,
+    },
+
+    itemOrientation:{
         flexDirection: 'row',
-        backgroundColor: '#rgb(42, 42, 42)',
-        marginTop: 10,
-        width: 180,
-        height: 60,
-        borderRadius: 4,
+        alignItems: 'center',
     },
 
-    imageContainer: {
-        borderTopLeftRadius: 4,
-        borderBottomLeftRadius: 4,
-        width: 60,
-        height: 60,
+    itemMusicImage:{
+        height: 56,
+        width: 56,
+        borderTopLeftRadius: 6,
+        borderBottomLeftRadius: 6,
+    },
+
+    itemPlaylistImage: {
+        height: 28,
+        width: 28,
+    },
+
+    itemLeftTopPlaylistImage: {
+        height: 28,
+        width: 28,
+        borderTopLeftRadius: 6,
+    },
+
+    itemLeftBotomPlaylistImage : {
+        height: 28,
+        width: 28,
+        borderBottomLeftRadius: 6,
     },
 
     textBox: {
-        marginLeft: 8,
         color: 'white',
-        fontSize: 22,
+        fontSize: 14,
         fontWeight: 'bold',
+        marginLeft: 8,
     },
 });

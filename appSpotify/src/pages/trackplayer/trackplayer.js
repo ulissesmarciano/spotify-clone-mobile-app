@@ -1,5 +1,5 @@
 import React from 'react';
-import { SafeAreaView, ScrollView, StatusBar } from 'react-native';
+import { ScrollView, StatusBar } from 'react-native';
 
 import HeadBar from './components/headbar/headbar';
 import PlayerScreen from './components/playerscreen/playerscreen';

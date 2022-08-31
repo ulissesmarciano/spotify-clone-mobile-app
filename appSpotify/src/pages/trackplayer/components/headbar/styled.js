@@ -2,37 +2,39 @@ import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
    container: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginTop: 25,
-    marginLeft: 15,
-    marginRight: 15,
-    height: 50,
-    flex: 1,
-   },
-   
-   image: {
-    height: 20,
-    width: 20,
+      marginTop: 35,
+      flexDirection: 'row',
+      marginLeft: 15,
+      marginRight: 15,
    },
 
-   imageContainer: {
-    justifyContent: 'center',
-    alignItems: 'center',
+   iconImage: {
+      height: 20,
+      width: 20,
+      alignSelf: 'center',
    },
 
-   midleText: {
-    alignItems: 'center',
-    justifyContent: 'center',
+   textContainer: {
+      flex: 8,
+      alignItems: 'center',
+      justifyContent: 'center',
+   },
+
+   buttonContainer: {
+      justifyContent: 'center',
+      flex: 1,
    },
 
    title: {
-    color: '#rgb(230, 230, 230)',
-    textTransform: 'uppercase',
+      color: '#BBBBBB',
+      fontSize: 12,
+      fontWeight: '600',
    },
 
    subtitle: {
-    color: 'white',
-    fontWeight: 'bold',
-   }
+      color: 'white',
+      fontSize: 12,
+      fontWeight: 'bold',
+   },
+
 });

@@ -20,6 +20,7 @@ import Explorer from "./pages/search/Explorer.js";
 import SearchPlaceSection from "./pages/search/subpages/searchplace/searchplace.js";
 
 import TrackPlayer from "./pages/trackplayer/trackplayer.js";
+import PodcastPlayer from "./pages/podcastplayer/podcastplayer.js";
 
 
 
@@ -66,10 +67,19 @@ function TrackPlayerStackScreen() {
       headerBackVisible: false,     
     }}
     />
+
+<TrackPlayerStack.Screen 
+    name="Podcast Player"
+    component={PodcastPlayer}
+    options={{
+      title: ' ',
+      headerTransparent: true,
+      headerBackVisible: false,     
+    }}
+    />
   </TrackPlayerStack.Navigator>
   );
-}
-
+};
 
 const ExplorerStack = createNativeStackNavigator();
 
