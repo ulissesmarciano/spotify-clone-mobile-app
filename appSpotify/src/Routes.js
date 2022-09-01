@@ -12,15 +12,16 @@ import { createBottomTabNavigator} from "@react-navigation/bottom-tabs";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 
-
 import Home from "./pages/home/Home.js";
 import Library from "./pages/library/Library";
 import LibraryPlace from "./pages/library/subpages/libraryplace/libraryplace.js";
 import Explorer from "./pages/search/Explorer.js";
 import SearchPlaceSection from "./pages/search/subpages/searchplace/searchplace.js";
 
-import TrackPlayer from "./pages/trackplayer/trackplayer.js";
-import PodcastPlayer from "./pages/podcastplayer/podcastplayer.js";
+import TrackPlayer from "./pages/players/trackplayer/trackplayer.js";
+import PodcastPlayer from "./pages/players/podcastplayer/podcastplayer.js";
+
+import ArtistScreen from "./pages/listscreens/artist/artist.js";
 
 
 
@@ -75,6 +76,18 @@ function TrackPlayerStackScreen() {
       title: ' ',
       headerTransparent: true,
       headerBackVisible: false,     
+    }}
+    />
+
+<TrackPlayerStack.Screen 
+    name="Artist Screen"
+    component={ArtistScreen}    
+    options={{
+      title: ' ',
+      headerTransparent: true,
+      headerBackVisible: true,
+      headerTintColor: 'white',
+      
     }}
     />
   </TrackPlayerStack.Navigator>
