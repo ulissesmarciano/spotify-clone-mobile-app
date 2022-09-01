@@ -1,5 +1,5 @@
 import React from 'react';
-import { StatusBar, ScrollView } from 'react-native';
+import { StatusBar } from 'react-native';
 
 import LinearGradient from 'react-native-linear-gradient';
 
