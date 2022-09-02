@@ -5,6 +5,7 @@ import LinearGradient from 'react-native-linear-gradient';
 
 import HeadScreen from './components/header/header';
 import ControlListSection from './components/controlllist/controlllist';
+import LikedMusics from './components/likedmusic/likedmusics';
 
 const Background = ( {children} ) => {
     return (
@@ -20,7 +21,8 @@ export default function ArtistScreen (){
             <StatusBar barStyle="light-content" translucent={true} backgroundColor= "#rgba(1, 1, 1, 0.3)"/>
             <ScrollView>
                 <HeadScreen />
-                <ControlListSection/>
+                <ControlListSection />
+                <LikedMusics />
             </ScrollView>
         </Background>
     );
