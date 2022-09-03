@@ -8,6 +8,7 @@ import ControlListSection from './components/controlllist/controlllist';
 import LikedMusics from './components/likedmusic/likedmusics';
 import PopularHitsSection from './components/popularhits/popularhits';
 import ChoseOfTheArtistSection from './components/choseoftheartist/choseoftheartist';
+import PopularReleasesSection from './components/popularreleases/popularreleases';
 
 const Background = ( {children} ) => {
     return (
@@ -33,6 +34,7 @@ export default function ArtistScreen (){
                 <LikedMusics />
                 <PopularHitsSection />
                 <ChoseOfTheArtistSection/>
+                <PopularReleasesSection/>
                 <Botton />
             </ScrollView>
         </Background>

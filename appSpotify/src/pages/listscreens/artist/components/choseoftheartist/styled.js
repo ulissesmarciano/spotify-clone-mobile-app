@@ -12,6 +12,7 @@ export default StyleSheet.create({
     imageItem: {
         height: 230,
         borderRadius: 6,
+        marginTop: 15,
         marginLeft: 8,
         marginRight: 8,
         backgroundColor: 'black',
