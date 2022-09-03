@@ -5,6 +5,7 @@ export default StyleSheet.create({
         flexDirection: 'row',
         marginLeft: 8,
         marginRight: 8,
+        marginTop: 8,
     },
 
     artistAvatar: {

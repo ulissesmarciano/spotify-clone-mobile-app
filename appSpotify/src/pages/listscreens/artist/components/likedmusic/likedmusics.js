@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, ImageBackground, Image } from 'react-native';
+import { View, Text, ImageBackground, Image, TouchableOpacity } from 'react-native';
 
 import S from './styled.js'
 
@@ -8,6 +8,7 @@ const mockedImage = 'https://avatars.githubusercontent.com/u/104742158?v=4';
 
 export default function LikedMusics () {
     return(
+        <TouchableOpacity>
         <View style={S.container}>
             <View>
                 <ImageBackground 
@@ -23,5 +24,6 @@ export default function LikedMusics () {
                 <Text style={S.subtitle}>25 músicas de Ulisses Gonçalves</Text>
             </View>
         </View>
+        </TouchableOpacity>
     );
 };

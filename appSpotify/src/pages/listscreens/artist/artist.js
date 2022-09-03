@@ -6,6 +6,7 @@ import LinearGradient from 'react-native-linear-gradient';
 import HeadScreen from './components/header/header';
 import ControlListSection from './components/controlllist/controlllist';
 import LikedMusics from './components/likedmusic/likedmusics';
+import PopularHitsSection from './components/popularhits/popularhits';
 
 const Background = ( {children} ) => {
     return (
@@ -23,6 +24,7 @@ export default function ArtistScreen (){
                 <HeadScreen />
                 <ControlListSection />
                 <LikedMusics />
+                <PopularHitsSection />
             </ScrollView>
         </Background>
     );
