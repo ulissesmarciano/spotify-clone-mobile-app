@@ -31,10 +31,10 @@ export default function PopularHitsSection (){
         <View>
             <Text style={S.titleSection}>Popular</Text>
             <Item id={'1'} title={'Música 1'} subtitle={'1.000.000'}/>
-            <Item id={'2'} title={'Música 1'} subtitle={'981.136'}/>
-            <Item id={'3'} title={'Música 1'} subtitle={'2.456.632'}/>
-            <Item id={'4'} title={'Música 1'} subtitle={'825.632'}/>
-            <Item id={'5'} title={'Música 1'} subtitle={'1.163.632'}/>
+            <Item id={'2'} title={'Música 2'} subtitle={'981.136'}/>
+            <Item id={'3'} title={'Música 3'} subtitle={'2.456.632'}/>
+            <Item id={'4'} title={'Música 4'} subtitle={'825.632'}/>
+            <Item id={'5'} title={'Música 5'} subtitle={'1.163.632'}/>
         </View>
     );
 };

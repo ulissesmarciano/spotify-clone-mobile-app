@@ -1,5 +1,5 @@
 import React from 'react';
-import { StatusBar, ScrollView } from 'react-native';
+import { StatusBar, ScrollView, View } from 'react-native';
 
 import LinearGradient from 'react-native-linear-gradient';
 
@@ -7,12 +7,19 @@ import HeadScreen from './components/header/header';
 import ControlListSection from './components/controlllist/controlllist';
 import LikedMusics from './components/likedmusic/likedmusics';
 import PopularHitsSection from './components/popularhits/popularhits';
+import ChoseOfTheArtistSection from './components/choseoftheartist/choseoftheartist';
 
 const Background = ( {children} ) => {
     return (
-        <LinearGradient colors={['#6d6e45','#121212']} style={{flex:1}}>
+        <LinearGradient colors={['#6d6e45','#121212', '#121212']} style={{flex:1}}>
             {children}
         </LinearGradient>
+    );
+};
+
+const Botton = () => {
+    return(
+        <View style={{height: 60}} />
     );
 };
 
@@ -25,6 +32,8 @@ export default function ArtistScreen (){
                 <ControlListSection />
                 <LikedMusics />
                 <PopularHitsSection />
+                <ChoseOfTheArtistSection/>
+                <Botton />
             </ScrollView>
         </Background>
     );
