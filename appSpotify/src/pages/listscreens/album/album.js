@@ -1,10 +1,28 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { ScrollView, View } from 'react-native';
 
-export default function ArtistScreen(){
+import LinearGradient from 'react-native-linear-gradient';
+
+const Background = ( {children} ) => {
+    return (
+        <LinearGradient colors={['#6d6d6d','#121212', '#121212']} style={{flex:1}}>
+            {children}
+        </LinearGradient>
+    );
+};
+
+const Botton = () => {
     return(
-        <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-            <Text style={{fontSize: 36, fontWeight: 'bold'}}>Olá</Text>
-        </View>
+        <View style={{height: 60}} />
+    );
+};
+
+export default function AlbumScreen(){
+    return(
+        <Background>
+            <ScrollView>
+                <Botton/>
+            </ScrollView>
+        </Background>
     );
 }; 

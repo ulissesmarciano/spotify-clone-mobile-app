@@ -22,7 +22,7 @@ import TrackPlayer from "./pages/players/trackplayer/trackplayer.js";
 import PodcastPlayer from "./pages/players/podcastplayer/podcastplayer.js";
 
 import ArtistScreen from "./pages/listscreens/artist/artist.js";
-
+import AlbumScreen from "./pages/listscreens/album/album.js";
 
 
 function HomeScreen() {
@@ -44,12 +44,12 @@ return (
 );
 }
 
-const TrackPlayerStack = createNativeStackNavigator();
+const HomeStack = createNativeStackNavigator();
 
-function TrackPlayerStackScreen() {
+function HomeStackScreen() {
   return(
-  <TrackPlayerStack.Navigator>
-    <TrackPlayerStack.Screen 
+  <HomeStack.Navigator>
+    <HomeStack.Screen 
     name="Home"
     component={HomeScreen}
     options={{
@@ -59,7 +59,7 @@ function TrackPlayerStackScreen() {
     }}
     />
 
-    <TrackPlayerStack.Screen 
+    <HomeStack.Screen 
     name="Track Player"
     component={TrackPlayer}
     options={{
@@ -69,7 +69,7 @@ function TrackPlayerStackScreen() {
     }}
     />
 
-<TrackPlayerStack.Screen 
+    <HomeStack.Screen 
     name="Podcast Player"
     component={PodcastPlayer}
     options={{
@@ -79,7 +79,7 @@ function TrackPlayerStackScreen() {
     }}
     />
 
-<TrackPlayerStack.Screen 
+    <HomeStack.Screen 
     name="Artist Screen"
     component={ArtistScreen}    
     options={{
@@ -90,7 +90,18 @@ function TrackPlayerStackScreen() {
       
     }}
     />
-  </TrackPlayerStack.Navigator>
+
+    <HomeStack.Screen 
+    name="Album Screen"
+    component={AlbumScreen}
+    options={{
+      title: ' ',
+      headerTransparent: true,
+      headerTintColor: 'white',
+      
+    }}
+    />
+  </HomeStack.Navigator>
   );
 };
 
@@ -176,7 +187,7 @@ export default function Routes() {
           >
       <Tab.Screen
               name="Início"
-              component={TrackPlayerStackScreen}
+              component={HomeStackScreen}
               options={{                    
                   tabBarIcon: ({focused}) => (
                     <View>
