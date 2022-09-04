@@ -2,6 +2,7 @@ import React from 'react';
 import { ScrollView, View, StatusBar } from 'react-native';
 
 import LinearGradient from 'react-native-linear-gradient';
+import ControllListSection from './components/controlllist/controlllist.js';
 
 import HeaderSection from './components/header/header.js';
 
@@ -25,6 +26,7 @@ export default function AlbumScreen(){
             <StatusBar barStyle="light-content" translucent={true} backgroundColor= "#rgba(1, 1, 1, 0.3)"/>
             <ScrollView>
                 <HeaderSection/>
+                <ControllListSection />
                 <Botton/>
             </ScrollView>
         </Background>
