@@ -13,6 +13,7 @@ import ParticipatePlaylistSection from './components/participateinplaylist/parti
 import AboutArtistSection from './components/aboutartist/about';
 import PlaylistOfArtistSection from './components/playlistofartist/playlistofartist';
 import RelatedArtistsSection from './components/relatedartists/relatedartists';
+import AppearsInSection from './components/appearsin/appearsin';
 
 const Background = ( {children} ) => {
     return (
@@ -43,6 +44,7 @@ export default function ArtistScreen (){
                 <AboutArtistSection />
                 <PlaylistOfArtistSection />
                 <RelatedArtistsSection />
+                <AppearsInSection />
                 <Botton />
             </ScrollView>
         </Background>
