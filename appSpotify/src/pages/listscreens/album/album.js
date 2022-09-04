@@ -5,6 +5,7 @@ import LinearGradient from 'react-native-linear-gradient';
 import ControllListSection from './components/controlllist/controlllist.js';
 
 import HeaderSection from './components/header/header.js';
+import ResumeTracklistSection from './components/resumetracklist/resumetracklist.js';
 import TracklistSection from './components/tracklist/tracklist.js';
 
 const Background = ( {children} ) => {
@@ -29,6 +30,7 @@ export default function AlbumScreen(){
                 <HeaderSection/>
                 <ControllListSection />
                 <TracklistSection />
+                <ResumeTracklistSection />
                 <Botton/>
             </ScrollView>
         </Background>
