@@ -1,7 +1,9 @@
 import React from 'react';
-import { ScrollView, View } from 'react-native';
+import { ScrollView, View, StatusBar } from 'react-native';
 
 import LinearGradient from 'react-native-linear-gradient';
+
+import HeaderSection from './components/header/header.js';
 
 const Background = ( {children} ) => {
     return (
@@ -20,7 +22,9 @@ const Botton = () => {
 export default function AlbumScreen(){
     return(
         <Background>
+            <StatusBar barStyle="light-content" translucent={true} backgroundColor= "#rgba(1, 1, 1, 0.3)"/>
             <ScrollView>
+                <HeaderSection/>
                 <Botton/>
             </ScrollView>
         </Background>
