@@ -50,6 +50,15 @@ const RecentPodcast = ({title}) => {
     );
 };
 
+const RecentAlbum = ({title}) => {
+    return (
+        <View style={S.itemOrientation}>
+            <Image style={S.itemMusicImage} source={{uri:mockedImage}}/>
+            <Text style={S.textBox}>{title}</Text>
+        </View>
+    );
+};
+
 export default function RecentSection(){
     const navigation = useNavigation();
 
@@ -76,7 +85,7 @@ export default function RecentSection(){
                             <RecentMusic title="Música"/>
                         </TouchableOpacity>
                         <TouchableOpacity style={S.recentItemContainer} onPress={() => navigation.navigate("Track Player")}>
-                            <RecentPlaylist title="Playlist"/>
+                            <RecentAlbum title="Album"/>
                         </TouchableOpacity>               
                 </View>
                 <View style={S.boxContent}>
