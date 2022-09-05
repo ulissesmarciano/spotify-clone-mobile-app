@@ -23,7 +23,7 @@ import PodcastPlayer from "./pages/players/podcastplayer/podcastplayer.js";
 
 import ArtistScreen from "./pages/listscreens/artist/artist.js";
 import AlbumScreen from "./pages/listscreens/album/album.js";
-import Play
+import PlaylistScreen from "./pages/listscreens/playlist/playlist.js";
 
 
 function HomeScreen() {
@@ -95,6 +95,17 @@ function HomeStackScreen() {
     <HomeStack.Screen 
     name="Album Screen"
     component={AlbumScreen}
+    options={{
+      title: ' ',
+      headerTransparent: true,
+      headerTintColor: 'white',
+      
+    }}
+    />
+
+<HomeStack.Screen 
+    name="Playlist Screen"
+    component={PlaylistScreen}
     options={{
       title: ' ',
       headerTransparent: true,
