@@ -1,6 +1,8 @@
 import React from 'react';
 import { View, ScrollView, StatusBar } from 'react-native';
+
 import HeaderSection from './components/header/header';
+import ControllListSection from './components/controlllist/controlllist';
 
 const Background = ( {children} ) => {
     return (
@@ -16,6 +18,7 @@ export default function PlaylistScreen(){
         <StatusBar barStyle="light-content" translucent={true} backgroundColor= "#rgba(1, 1, 1, 0.3)"/>
         <ScrollView>
             <HeaderSection/>
+            <ControllListSection />
         </ScrollView>
         </Background>
     );
