@@ -3,6 +3,7 @@ import { View, ScrollView, StatusBar } from 'react-native';
 
 import HeaderSection from './components/header/header';
 import ControllListSection from './components/controlllist/controlllist';
+import TracklistScreen from './components/tracklist/tracklist';
 
 const Background = ( {children} ) => {
     return (
@@ -19,6 +20,7 @@ export default function PlaylistScreen(){
         <ScrollView>
             <HeaderSection/>
             <ControllListSection />
+            <TracklistScreen />
         </ScrollView>
         </Background>
     );
