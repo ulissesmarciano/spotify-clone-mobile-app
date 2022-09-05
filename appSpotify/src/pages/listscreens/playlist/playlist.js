@@ -4,6 +4,7 @@ import { View, ScrollView, StatusBar } from 'react-native';
 import HeaderSection from './components/header/header';
 import ControllListSection from './components/controlllist/controlllist';
 import TracklistScreen from './components/tracklist/tracklist';
+import RecomendationSection from './components/recommendation/recommendation';
 
 const Background = ( {children} ) => {
     return (
@@ -21,6 +22,7 @@ export default function PlaylistScreen(){
             <HeaderSection/>
             <ControllListSection />
             <TracklistScreen />
+            <RecomendationSection />
         </ScrollView>
         </Background>
     );
