@@ -23,6 +23,7 @@ import PodcastPlayer from "./pages/players/podcastplayer/podcastplayer.js";
 
 import ArtistScreen from "./pages/listscreens/artist/artist.js";
 import AlbumScreen from "./pages/listscreens/album/album.js";
+import Play
 
 
 function HomeScreen() {

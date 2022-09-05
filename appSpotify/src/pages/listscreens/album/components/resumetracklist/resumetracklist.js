@@ -1,10 +1,10 @@
 import React from 'react';
 import { View, Text, Image} from 'react-native';
 
+
 import S from './styled.js';
 
 const mockedImage = 'https://avatars.githubusercontent.com/u/104742158?v=4';
-
 
 const ResumeTracklistSection = () => {
     return(

@@ -1,18 +1,18 @@
 import React from 'react';
 import { ScrollView, View, StatusBar } from 'react-native';
 
-import LinearGradient from 'react-native-linear-gradient';
 import ControllListSection from './components/controlllist/controlllist.js';
 
 import HeaderSection from './components/header/header.js';
+import MoreOfSection from './components/moreof/moreof.js';
 import ResumeTracklistSection from './components/resumetracklist/resumetracklist.js';
 import TracklistSection from './components/tracklist/tracklist.js';
 
 const Background = ( {children} ) => {
     return (
-        <LinearGradient colors={['#6d6d6d','#121212', '#121212']} style={{flex:1}}>
+        <View style={{flex:1, backgroundColor: '#121212'}}>
             {children}
-        </LinearGradient>
+        </View>
     );
 };
 
@@ -31,6 +31,7 @@ export default function AlbumScreen(){
                 <ControllListSection />
                 <TracklistSection />
                 <ResumeTracklistSection />
+                <MoreOfSection />
                 <Botton/>
             </ScrollView>
         </Background>
