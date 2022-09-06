@@ -92,7 +92,7 @@ export default function RecentSection(){
                         <TouchableOpacity style={S.recentItemContainer} onPress={() => navigation.navigate("Artist Screen")}>
                             <RecentArtist title="Artista"/>
                         </TouchableOpacity>
-                        <TouchableOpacity style={S.recentItemContainer} onPress={() => navigation.navigate("Podcast Player")}>
+                        <TouchableOpacity style={S.recentItemContainer} onPress={() => navigation.navigate("Podcast Screen")}>
                             <RecentPodcast title="Podcast"/>
                         </TouchableOpacity>               
                 </View>

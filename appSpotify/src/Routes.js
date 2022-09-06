@@ -24,6 +24,7 @@ import PodcastPlayer from "./pages/players/podcastplayer/podcastplayer.js";
 import ArtistScreen from "./pages/listscreens/artist/artist.js";
 import AlbumScreen from "./pages/listscreens/album/album.js";
 import PlaylistScreen from "./pages/listscreens/playlist/playlist.js";
+import PodcastScreen from "./pages/listscreens/podcast/podcast.js";
 
 
 function HomeScreen() {
@@ -103,16 +104,27 @@ function HomeStackScreen() {
     }}
     />
 
-<HomeStack.Screen 
-    name="Playlist Screen"
-    component={PlaylistScreen}
-    options={{
-      title: ' ',
-      headerTransparent: true,
-      headerTintColor: 'white',
-      
-    }}
-    />
+    <HomeStack.Screen 
+      name="Playlist Screen"
+      component={PlaylistScreen}
+      options={{
+        title: ' ',
+        headerTransparent: true,
+        headerTintColor: 'white',
+        
+      }}
+      />
+
+    <HomeStack.Screen 
+      name="Podcast Screen"
+      component={PodcastScreen}
+      options={{
+        title: ' ',
+        headerTransparent: true,
+        headerTintColor: 'white',
+        
+      }}
+      />
   </HomeStack.Navigator>
   );
 };
