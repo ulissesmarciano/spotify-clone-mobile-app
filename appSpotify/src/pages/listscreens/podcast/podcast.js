@@ -3,6 +3,7 @@ import { View, StatusBar, ScrollView } from 'react-native';
 
 import HeaderSection from './components/header/header';
 import DescriptionSection from './components/description/description';
+import LastEpisodeSection from './components/lastepisode/lastepisode';
 
 const Background = ( {children} ) => {
     return(
@@ -19,6 +20,7 @@ export default function PodcastScreen (){
             <ScrollView>
             <HeaderSection />
             <DescriptionSection />
+            <LastEpisodeSection />
             </ScrollView>
         </Background>        
     );
