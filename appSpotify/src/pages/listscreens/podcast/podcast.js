@@ -1,10 +1,12 @@
 import React from 'react';
 import { View, StatusBar, ScrollView } from 'react-native';
 
-import HeaderSection from './components/header/header';
-import DescriptionSection from './components/description/description';
-import LastEpisodeSection from './components/lastepisode/lastepisode';
-import ControllListSection from './components/controlllists/controlllists';
+import HeaderSection from './components/header/header.js';
+import DescriptionSection from './components/description/description.js';
+import LastEpisodeSection from './components/lastepisode/lastepisode.js';
+import ControllListSection from './components/controlllists/controlllists.js';
+import EpisodesSection from './components/episodes/episodes.js';
+import SearchSection from './components/seachsection/searchsection.js';
 
 const Background = ( {children} ) => {
     return(
@@ -29,6 +31,8 @@ export default function PodcastScreen (){
             <DescriptionSection />
             <LastEpisodeSection />
             <ControllListSection />
+            <SearchSection/>
+            <EpisodesSection/>
             <Bottom />
             </ScrollView>
         </Background>        
