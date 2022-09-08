@@ -27,9 +27,24 @@ export default StyleSheet.create({
       marginHorizontal: 6,
     },
 
-    image:{
+    itemScreen: {
       height: 160,
       width: 160,
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+
+    itemScreen2: {
+      height: 160,
+      width: 160,
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+
+    textImageStyle: {
+      color: 'white',
+      fontSize: 50,
+      fontWeight: 'bold',
     },
 
     title: {

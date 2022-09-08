@@ -1,8 +1,10 @@
-import React from "react";
-import { SafeAreaView, View, FlatList, Text, Image } from 'react-native';
-import S from './styled'
+import React from 'react';
+import { SafeAreaView, View, FlatList, Text, TouchableOpacity } from 'react-native';
+import LinearGradient from 'react-native-linear-gradient';
+import { useNavigation } from '@react-navigation/native';
 
-const imageProfileGithub = 'https://avatars.githubusercontent.com/u/104742158?v=4';
+import S from './styled.js';
+
 
 const DATA = [
   {
@@ -17,14 +19,14 @@ const DATA = [
   },
   {
     id: 3,
-    title: 'Música',
-    subtitle: 'Single - Album',
+    title: 'Confira os lançamentos do...',
+    subtitle: 'Playlist',
   },
 
   {
     id:4,
-    title: 'Música',
-    subtitle: 'Single - Album',
+    title: 'Confira os lançamentos do...',
+    subtitle: 'Playlist',
   },
 
   {
@@ -53,20 +55,30 @@ const DATA = [
   
 ];
 
-const Item = ({ title }) => (
-    <View style={S.item}>
-      <Image style={S.image} source={{uri: imageProfileGithub}}/>
+const Item = ({ title }) => {
+  const navigator = useNavigation();
+  return(
+    <TouchableOpacity style={S.item} onPress={() => navigator.navigate("Playlist Screen")}>
+      <LinearGradient style={S.itemScreen2} colors={['#9dff00', '#182600']}>
+          <Text style={S.textImageStyle}>L</Text>
+      </LinearGradient>
       <Text style={S.title2}>{title}</Text>
-    </View>
-);
+    </TouchableOpacity>
+  );
+};
 
-const Item2 = ({ title, subtitle }) => (
-    <View style={S.item}>
-      <Image style={S.image} source={{uri: imageProfileGithub}}/>           
+const Item2 = ({ title, subtitle }) => {
+  const navigator = useNavigation();
+  return(
+    <TouchableOpacity style={S.item} onPress={() => navigator.navigate("Track Player")}>
+      <LinearGradient style={S.itemScreen2} colors={['#ff2a26', '#5e0200']}>
+          <Text style={S.textImageStyle}>M</Text>
+      </LinearGradient>
       <Text style={S.title}>{title}</Text>
       <Text style={S.subtitle}>{subtitle}</Text>
-    </View>
-);
+    </TouchableOpacity>
+  );
+};
 
 const NewReleasesSection = () => {
     const renderItem = ({ item }) => {
