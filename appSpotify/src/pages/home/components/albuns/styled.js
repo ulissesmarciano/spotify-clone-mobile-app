@@ -21,28 +21,28 @@ export default StyleSheet.create({
     },
 
     item: {
-      height: 250,
       width: 160,
       marginHorizontal: 6,
     },
+
+    itemScreen: {
+      height: 160,
+      width: 160,
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+
+    textImageStyle: {
+      color: 'white',
+      fontSize: 50,
+      fontWeight: 'bold',
+    },
     
-    image:{
-      height: 160,
-      width: 160,
-      marginBottom: 10,
-    },
-
-    image2:{
-      height: 160,
-      width: 160,
-      marginBottom: 10,
-      borderRadius: 100,
-    },
-
     title: {
       color: 'white',
       fontSize: 18,
       fontWeight: 'bold',
+      marginTop: 6,
     },
     
     subtitle: {

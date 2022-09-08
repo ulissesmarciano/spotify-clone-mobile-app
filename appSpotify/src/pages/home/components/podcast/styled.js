@@ -6,6 +6,10 @@ export default StyleSheet.create ({
         backgroundColor: 'black',
     },
 
+    backgroundContainer: {
+        borderRadius: 6,
+    },
+
     contentContainer: {
         margin: 15,
     },

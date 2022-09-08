@@ -1,10 +1,11 @@
-import React from "react";
-import { SafeAreaView, View, FlatList, Text, Image, TouchableOpacity } from 'react-native';
+import React from 'react';
+import { SafeAreaView, View, FlatList, Text, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+
+import LinearGradient from 'react-native-linear-gradient';
 
 import S from './styled';
 
-const imageProfileGithub = 'https://avatars.githubusercontent.com/u/104742158?v=4';
 
 const DATA = [
   {
@@ -58,7 +59,9 @@ const Item = ({ title, subtitle }) => {
   const navigator = useNavigation();
   return(
     <TouchableOpacity style={S.item} onPress={() => navigator.navigate("Album Screen")}>
-      <Image style={S.image} source={{uri: imageProfileGithub}}/>
+      <LinearGradient style={S.itemScreen} colors={['#eb88cf', '#910068']}>
+          <Text style={S.textImageStyle}>A</Text>
+      </LinearGradient>      
       <Text style={S.title}>{title}</Text>
       <Text style={S.subtitle}>{subtitle}</Text>    
     </TouchableOpacity>

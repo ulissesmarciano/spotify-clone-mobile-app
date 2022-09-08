@@ -48,28 +48,19 @@ export default StyleSheet.create({
         alignItems: 'center',
     },
 
-    itemMusicImage:{
+    itemScreen:{
         height: 56,
         width: 56,
         borderTopLeftRadius: 6,
         borderBottomLeftRadius: 6,
+        alignItems: 'center',
+        justifyContent: 'center',
     },
 
-    itemPlaylistImage: {
-        height: 28,
-        width: 28,
-    },
-
-    itemLeftTopPlaylistImage: {
-        height: 28,
-        width: 28,
-        borderTopLeftRadius: 6,
-    },
-
-    itemLeftBotomPlaylistImage : {
-        height: 28,
-        width: 28,
-        borderBottomLeftRadius: 6,
+    itemImageContent: {
+        color: 'white',
+        fontSize: 20,
+        fontWeight: 'bold',
     },
 
     textBox: {

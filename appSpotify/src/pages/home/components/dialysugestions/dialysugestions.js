@@ -59,7 +59,7 @@ const DiscoverSection = () => {
 
     return(
         <View style={S.titleContainer}>
-            <Text style={S.oMTitle}>Descubra algo novo pra você</Text>        
+            <Text style={S.oMTitle}>Sugestões para você</Text>        
         <SafeAreaView style={S.container}>
         <FlatList
           data={DATA}

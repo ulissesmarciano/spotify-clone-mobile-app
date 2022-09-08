@@ -1,23 +1,19 @@
 import React from 'react';
-import { View, ImageBackground, Text, Image, TouchableOpacity } from 'react-native';
-import S from './styled.js';
+import { View, Text, Image, TouchableOpacity } from 'react-native';
+
+import LinearGradient from 'react-native-linear-gradient';
 
 import { useNavigation } from '@react-navigation/native';
 
-import Play from './icons/playlistplayicon.png';
+import S from './styled.js';
 
-const mockedImage = 'https://avatars.githubusercontent.com/u/104742158?v=4';
+import Play from './icons/playlistplayicon.png';
 
 const PodcastSection = () => {
     const navigation = useNavigation();
     return (
         <View style={S.container}>
-            <ImageBackground 
-            source={{uri: mockedImage}} 
-            imageStyle={{
-                borderRadius: 6, 
-                opacity: 0.6,
-            }}>
+            <LinearGradient style={S.backgroundContainer} colors={['#rgba(227, 154, 225, 0.6)', '#rgba(191, 71, 188, 0.6)', '#rgba(102, 18, 100, 0.6)']} >
                 <View style={S.contentContainer}>
                     <View>
                         <Text style={S.title}>Podcast do Ulisses</Text>
@@ -27,7 +23,7 @@ const PodcastSection = () => {
                         <Image style={S.playIconStyle} source={Play}/>
                     </TouchableOpacity>
                 </View>
-            </ImageBackground>
+            </LinearGradient>
         </View>
     );
 };

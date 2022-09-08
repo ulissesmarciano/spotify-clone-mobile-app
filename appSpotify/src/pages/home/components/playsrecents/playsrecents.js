@@ -1,11 +1,11 @@
-import React from "react";
-import { SafeAreaView, View, FlatList, Text, Image, TouchableOpacity } from 'react-native';
+import React from 'react';
+import { SafeAreaView, View, FlatList, Text, TouchableOpacity } from 'react-native';
 
 import { useNavigation } from '@react-navigation/native';
 
-import S from './styled.js'
+import LinearGradient from 'react-native-linear-gradient';
 
-const imageProfileGithub = 'https://avatars.githubusercontent.com/u/104742158?v=4';
+import S from './styled.js'
 
 const DATA = [
   {
@@ -51,7 +51,9 @@ const Item = ({ title }) => {
   const navigation = useNavigation();
   return(
     <TouchableOpacity style={S.item} onPress={() => navigation.navigate("Artist Screen")}>
-      <Image style={S.image} source={{uri: imageProfileGithub}}/>      
+        <LinearGradient style={S.itemScreen} colors={['#0ec997', '#0a07b3']}>
+          <Text style={S.textImageStyle}>A</Text>
+        </LinearGradient>    
       <Text style={S.title}>{title}</Text>
     </TouchableOpacity>
     );
@@ -61,7 +63,9 @@ const Item2 = ({ title }) => {
   const navigation = useNavigation();
   return ( 
     <TouchableOpacity style={S.item} onPress={() => navigation.navigate("Playlist Screen")}>
-      <Image style={S.image2} source={{uri: imageProfileGithub }}/>
+        <LinearGradient style={S.itemScreen} colors={['#c95ad1', '#430b47']}>
+          <Text style={S.textImageStyle}>P</Text>
+        </LinearGradient>
       <Text style={S.title}>{title}</Text>
     </TouchableOpacity>
   );
@@ -71,14 +75,9 @@ const Item3 = ({ title }) => {
   const navigation = useNavigation();
   return(
   <TouchableOpacity style={S.item} onPress={() => navigation.navigate("Playlist Screen")}>
-    <View style={S.image3Orientation}>
-      <Image style={S.image3} source={{uri: imageProfileGithub }}/>
-      <Image style={S.image3} source={{uri: imageProfileGithub }}/>
-    </View>
-    <View style={S.image3Orientation}>
-      <Image style={S.image3} source={{uri: imageProfileGithub }}/>
-      <Image style={S.image3} source={{uri: imageProfileGithub }}/>
-    </View>
+    <LinearGradient style={S.itemScreen} colors={['#e3ca71', '#a60d0d']}>
+          <Text style={S.textImageStyle}>TG</Text>
+      </LinearGradient>
     <Text style={S.title}>{title}</Text>
   </TouchableOpacity>
   );
