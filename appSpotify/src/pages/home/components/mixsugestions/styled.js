@@ -25,11 +25,22 @@ export default StyleSheet.create({
       width: 160,
       marginHorizontal: 6,
     },
-    
-    image:{
-      height: 160,
-      width: 160,
-      marginBottom: 10,
+
+    imageOrientation: {
+      flexDirection: 'row',
+    },
+
+    itemScreen: {
+      height: 80,
+      width: 80,
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+
+    textImageStyle: {
+      color: 'white',
+      fontSize: 50,
+      fontWeight: 'bold',
     },
 
     title: {
