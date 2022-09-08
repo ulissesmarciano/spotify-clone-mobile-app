@@ -1,45 +1,34 @@
 import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create ({
-    podcastStyle: {
-        alignItems: 'center',
-        marginTop: 20,
-        marginLeft: 15,
-        marginRight: 15,
+    container: {
+        margin: 15,
+        backgroundColor: 'black',
     },
 
-    backImage: {
-        height: 183, 
-        width: 365,
+    contentContainer: {
+        margin: 15,
     },
 
-    textIcon: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
+    title: {
+        color: 'white',
+        fontSize: 26,
+        fontWeight: 'bold',
+        marginBottom: 10,
     },
 
-    allText: {
-        marginLeft: 12,
-    },
-
-    descriptionPodcast: {
+    subtitle: {
+        color: 'white',
         fontSize: 18,
-        marginTop: 10,
-        color: 'white',
-        fontWeight: 'bold',
+        marginBottom: 10,
     },
 
-    titlePodcast: {
-        fontSize: 30,
-        fontWeight: 'bold',
-        color: 'white',
+    buttonContainer: {
+        alignItems: 'flex-end',
     },
 
-    playIcon: {
-        height: 50,
-        width: 50,
-        marginRight: 15,
-        marginTop: 120,
-    },
-
+    playIconStyle: {
+        height: 45,
+        width: 45,
+    }
 });

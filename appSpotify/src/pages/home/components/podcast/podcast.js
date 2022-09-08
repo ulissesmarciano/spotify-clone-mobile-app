@@ -1,25 +1,32 @@
 import React from 'react';
-import { View, ImageBackground, Text, Image } from 'react-native';
+import { View, ImageBackground, Text, Image, TouchableOpacity } from 'react-native';
 import S from './styled.js';
 
-const imageProfileGithub = 'https://avatars.githubusercontent.com/u/104742158?v=4';
-const imagePlayIcon = './icons/playlistplayicon.png';
+import { useNavigation } from '@react-navigation/native';
+
+import Play from './icons/playlistplayicon.png';
+
+const mockedImage = 'https://avatars.githubusercontent.com/u/104742158?v=4';
 
 const PodcastSection = () => {
+    const navigation = useNavigation();
     return (
-        <View style={S.podcastStyle}>
+        <View style={S.container}>
             <ImageBackground 
-                source={{uri: imageProfileGithub}} 
-                style={S.backImage}
-                imageStyle={{ borderRadius: 4, opacity: 0.6}}>
-                <View style={S.textIcon}>
-                    <View style={S.allText}>
-                            <Text style={S.descriptionPodcast}>Podcast em vídeo</Text>
-                            <Text style={S.titlePodcast} >Podcast do Ulisses</Text>
-                            <Text style={S.descriptionPodcast}>Ouça o melhor podcast sobre desenvolvimento de software</Text>                    
+            source={{uri: mockedImage}} 
+            imageStyle={{
+                borderRadius: 6, 
+                opacity: 0.6,
+            }}>
+                <View style={S.contentContainer}>
+                    <View>
+                        <Text style={S.title}>Podcast do Ulisses</Text>
+                        <Text style={S.subtitle}>Ouça o melhor podcast sobre desenvolvimento de software</Text>
                     </View>
-                    <Image style={ S.playIcon} source={require(imagePlayIcon)}/>
-                </View>            
+                    <TouchableOpacity style={S.buttonContainer} onPress={() => navigation.navigate("Podcast Screen")}>
+                        <Image style={S.playIconStyle} source={Play}/>
+                    </TouchableOpacity>
+                </View>
             </ImageBackground>
         </View>
     );
