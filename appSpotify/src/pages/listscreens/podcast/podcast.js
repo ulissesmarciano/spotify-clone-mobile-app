@@ -18,7 +18,7 @@ const Background = ( {children} ) => {
 
 const Bottom = () => {
     return(
-        <View style={{marginBottom: 200}}/>
+        <View style={{marginBottom: 60}}/>
     );
 };
 
