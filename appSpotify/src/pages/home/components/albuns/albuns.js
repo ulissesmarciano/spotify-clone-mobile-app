@@ -1,6 +1,8 @@
 import React from "react";
-import { SafeAreaView, View, FlatList, Text, Image } from 'react-native';
-import S from './styled'
+import { SafeAreaView, View, FlatList, Text, Image, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+
+import S from './styled';
 
 const imageProfileGithub = 'https://avatars.githubusercontent.com/u/104742158?v=4';
 
@@ -52,13 +54,16 @@ const DATA = [
   },
 ];
 
-const Item = ({ title, subtitle }) => (
-    <View style={S.item}>
+const Item = ({ title, subtitle }) => {
+  const navigator = useNavigation();
+  return(
+    <TouchableOpacity style={S.item} onPress={() => navigator.navigate("Album Screen")}>
       <Image style={S.image} source={{uri: imageProfileGithub}}/>
       <Text style={S.title}>{title}</Text>
       <Text style={S.subtitle}>{subtitle}</Text>    
-    </View>
-  );
+    </TouchableOpacity>
+  )
+};
 
 const AlbunsSection = () => {
     const renderItem = ({ item }) => (
