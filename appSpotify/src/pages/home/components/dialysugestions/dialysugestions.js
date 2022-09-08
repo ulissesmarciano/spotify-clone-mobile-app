@@ -1,8 +1,11 @@
-import React from "react";
-import { SafeAreaView, View, FlatList, Text, Image } from 'react-native';
-import S from './styled'
+import React from 'react';
+import { SafeAreaView, View, FlatList, Text, Image, TouchableOpacity } from 'react-native';
 
-const imageProfileGithub = 'https://avatars.githubusercontent.com/u/104742158?v=4';
+import LinearGradient from 'react-native-linear-gradient';
+import { useNavigation } from '@react-navigation/native';
+
+import S from './styled';
+
 
 const DATA = [
   {
@@ -44,12 +47,17 @@ const DATA = [
   },
 ];
 
-const Item = ({ title }) => (
-    <View style={S.item}>
-      <Image style={S.image} source={{uri: imageProfileGithub}}/>
+const Item = ({ title }) => {
+  const navigator = useNavigation();
+  return(
+    <TouchableOpacity style={S.item} onPress={() => navigator.navigate("Album Screen")}>
+      <LinearGradient style={S.itemScreen} colors={['#05f545', '#004011']}>
+          <Text style={S.textImageStyle}>A</Text>
+      </LinearGradient>
       <Text style={S.title}>{title}</Text>
-    </View>
-);
+    </TouchableOpacity>
+ );
+};
 
 const DiscoverSection = () => {
     const renderItem = ({ item }) => (
