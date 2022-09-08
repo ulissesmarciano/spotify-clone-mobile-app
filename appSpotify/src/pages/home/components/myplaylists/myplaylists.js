@@ -1,8 +1,10 @@
-import React from "react";
-import { SafeAreaView, View, FlatList, Text, Image } from 'react-native';
-import S from './styled'
+import React from 'react';
+import { SafeAreaView, View, FlatList, Text, Image, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
-const imageProfileGithub = 'https://avatars.githubusercontent.com/u/104742158?v=4';
+import LinearGradient from 'react-native-linear-gradient';
+
+import S from './styled.js';
 
 const DATA = [
   {
@@ -53,28 +55,44 @@ const DATA = [
   
 ];
 
-const Item = ({ title, subtitle }) => (
-    <View style={S.item}>
-      <Image style={S.image} source={{uri: imageProfileGithub}}/>
+const Item = ({ title, subtitle }) => {
+  const navigator = useNavigation();
+  return(
+    <TouchableOpacity style={S.item} onPress={() => navigator.navigate("Playlist Screen")}>
+      <LinearGradient style={S.itemScreen} colors={['#fcf642', '#960080']}>
+        <Text style={S.textImageStyle}>P</Text>
+      </LinearGradient>
       <Text style={S.title}>{title}</Text>
       <Text style={S.subtitle}>{subtitle}</Text>
-    </View>
-);
+    </TouchableOpacity>
+  )
+};
 
-const Item2 = ({ title, subtitle }) => (
-    <View style={S.item2}>
+const Item2 = ({ title, subtitle }) => {
+  const navigator = useNavigation();
+  return(
+    <TouchableOpacity style={S.item} onPress={() => navigator.navigate("Playlist Screen")}>
       <View style={S.imageOrientation}>
-        <Image style={S.image2} source={{uri: imageProfileGithub}}/>
-        <Image style={S.image2} source={{uri: imageProfileGithub}}/>
-      </View>
-      <View style={S.imageOrientation}>
-        <Image style={S.image2} source={{uri: imageProfileGithub}}/>
-        <Image style={S.image2} source={{uri: imageProfileGithub}}/>
+        <LinearGradient style={S.itemScreen2} colors={['#29ffea', '#020a21']}>
+          <Text style={S.textImageStyle}>P</Text>
+        </LinearGradient>
+        <LinearGradient style={S.itemScreen2} colors={['#30ff29', '#032102']}>
+          <Text style={S.textImageStyle}>P</Text>
+        </LinearGradient>
+        </View>
+        <View style={S.imageOrientation}>
+        <LinearGradient style={S.itemScreen2} colors={['#ff9ca4', '#4a0006']}>
+          <Text style={S.textImageStyle}>P</Text>
+        </LinearGradient>
+        <LinearGradient style={S.itemScreen2} colors={['#fcf642', '#4a4400']}>
+          <Text style={S.textImageStyle}>P</Text>
+        </LinearGradient>
       </View>      
       <Text style={S.title}>{title}</Text>
       <Text style={S.subtitle}>{subtitle}</Text>
-    </View>
-);
+    </TouchableOpacity>
+  )
+};
 
 const MyPlaylistsSection = () => {
     const renderItem = ({ item }) => {

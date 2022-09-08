@@ -26,24 +26,28 @@ export default StyleSheet.create({
       marginHorizontal: 6,
     },
 
-    item2: {
-        height: 220,
-        width: 160,
-        marginHorizontal: 6,
-    },
-    
-    image:{
-      height: 160,
-      width: 160,
-    },
-
-    image2: {
-        height: 80,
-        width: 80,
-      },
-    
     imageOrientation: {
       flexDirection: 'row',
+    },
+
+    itemScreen: {
+      height: 160,
+      width: 160,
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+
+    itemScreen2: {
+      height: 80,
+      width: 80,
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+
+    textImageStyle: {
+      color: 'white',
+      fontSize: 50,
+      fontWeight: 'bold',
     },
 
     title: {
