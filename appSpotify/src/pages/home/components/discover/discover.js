@@ -1,8 +1,10 @@
-import React from "react";
-import { SafeAreaView, View, FlatList, Text, Image } from 'react-native';
-import S from './styled'
+import React from 'react';
+import { SafeAreaView, View, FlatList, Text, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
-const imageProfileGithub = 'https://avatars.githubusercontent.com/u/104742158?v=4';
+import LinearGradient from 'react-native-linear-gradient';
+
+import S from './styled';
 
 const DATA = [
   {
@@ -48,20 +50,30 @@ const DATA = [
   },
 ];
 
-const Item = ({ title, subtitle }) => (
-    <View style={S.item}>
-      <Image style={S.image} source={{uri: imageProfileGithub}}/>
+const Item = ({ title, subtitle }) => {
+  const navigator = useNavigation();
+  return(  
+    <TouchableOpacity style={S.item} onPress={() => navigator.navigate("Track Player")}>
+      <LinearGradient style={S.itemScreen} colors={['#82f0ff', '#910068']}>
+          <Text style={S.textImageStyle}>M</Text>
+      </LinearGradient>
       <Text style={S.title}>{title}</Text>
       <Text style={S.subtitle}>{subtitle}</Text>    
-    </View>
-);
+    </TouchableOpacity>
+  );
+};
 
-const Item2 = ({ title }) => (
-    <View style={S.item}>
-        <Image style={S.image2} source={{uri: imageProfileGithub}}/>
+const Item2 = ({ title }) => {
+  const navigator = useNavigation();
+  return(
+    <TouchableOpacity style={S.item} onPress={() => navigator.navigate("Artist Screen")}>
+      <LinearGradient style={S.itemScreen} colors={['#eb88cf', '#22bef2']}>
+          <Text style={S.textImageStyle}>A</Text>
+      </LinearGradient>
         <Text style={S.title}>{title}</Text>
-    </View>
-);
+    </TouchableOpacity>
+  );
+};
 
 const DiscoverSection = () => {
     const renderItem = ({ item }) => {

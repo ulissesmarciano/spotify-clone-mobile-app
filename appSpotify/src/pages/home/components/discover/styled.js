@@ -26,18 +26,18 @@ export default StyleSheet.create({
       marginHorizontal: 6,
     },
     
-    image:{
+    itemScreen: {
       height: 160,
       width: 160,
-      marginBottom: 10,
+      alignItems: 'center',
+      justifyContent: 'center',
     },
 
-    image2:{
-      height: 160,
-      width: 160,
-      marginBottom: 10,
-      borderRadius: 100,
-      },
+    textImageStyle: {
+      color: 'white',
+      fontSize: 50,
+      fontWeight: 'bold',
+    },
 
     title: {
       color: 'white',
