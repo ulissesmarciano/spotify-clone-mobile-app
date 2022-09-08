@@ -7,47 +7,47 @@ const imageProfileGithub = 'https://avatars.githubusercontent.com/u/104742158?v=
 const DATA = [
   {
     id: 1,
-    title: 'Música',
+    title: 'Nome do Álbum',
     subtitle: 'Álbum - Artista',
   },
   {
     id: 2,
-    title: 'Música',
+    title: 'Nome do Álbum',
     subtitle: 'Álbum - Artista',
   },
   {
     id: 3,
-    title: 'Música',
+    title: 'Nome do Álbum',
     subtitle: 'Álbum - Artista',
   },
 
   {
     id:4,
-    title: 'Música',
+    title: 'Nome do Álbum',
     subtitle: 'Álbum - Artista',
   },
 
   {
     id:5,
-    title: 'Música',
+    title: 'Nome do Álbum',
     subtitle: 'Álbum - Artista',
   },
 
   {
     id:6,
-    title: 'Música',
+    title: 'Nome do Álbum',
     subtitle: 'Álbum - Artista',
   },
 
   {
     id:7,
-    title: 'Música',
+    title: 'Nome do Álbum',
     subtitle: 'Álbum - Artista',
   },
 
   {
     id:8,
-    title: 'Música',
+    title: 'Nome do Álbum',
     subtitle: 'Álbum - Artista',
   },
 ];

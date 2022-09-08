@@ -1,5 +1,8 @@
 import React from "react";
-import { SafeAreaView, View, FlatList, Text, Image } from 'react-native';
+import { SafeAreaView, View, FlatList, Text, Image, TouchableOpacity } from 'react-native';
+
+import { useNavigation } from '@react-navigation/native';
+
 import S from './styled.js'
 
 const imageProfileGithub = 'https://avatars.githubusercontent.com/u/104742158?v=4';
@@ -44,23 +47,30 @@ const DATA = [
   },
 ];
 
-const Item = ({ title }) => (
-    <View style={S.item}>
-      <Image style={S.image} source={{uri: imageProfileGithub}}/>
-      
+const Item = ({ title }) => {
+  const navigation = useNavigation();
+  return(
+    <TouchableOpacity style={S.item} onPress={() => navigation.navigate("Artist Screen")}>
+      <Image style={S.image} source={{uri: imageProfileGithub}}/>      
       <Text style={S.title}>{title}</Text>
-    </View>
-);
+    </TouchableOpacity>
+    );
+};
 
-const Item2 = ({ title }) => (
-  <View style={S.item}>
-    <Image style={S.image2} source={{uri: imageProfileGithub }}/>
-    <Text style={S.title}>{title}</Text>
-  </View>
-);
+const Item2 = ({ title }) => {
+  const navigation = useNavigation();
+  return ( 
+    <TouchableOpacity style={S.item} onPress={() => navigation.navigate("Playlist Screen")}>
+      <Image style={S.image2} source={{uri: imageProfileGithub }}/>
+      <Text style={S.title}>{title}</Text>
+    </TouchableOpacity>
+  );
+};
 
-const Item3 = ({ title }) => (
-  <View style={S.item}>
+const Item3 = ({ title }) => {
+  const navigation = useNavigation();
+  return(
+  <TouchableOpacity style={S.item} onPress={() => navigation.navigate("Playlist Screen")}>
     <View style={S.image3Orientation}>
       <Image style={S.image3} source={{uri: imageProfileGithub }}/>
       <Image style={S.image3} source={{uri: imageProfileGithub }}/>
@@ -70,9 +80,9 @@ const Item3 = ({ title }) => (
       <Image style={S.image3} source={{uri: imageProfileGithub }}/>
     </View>
     <Text style={S.title}>{title}</Text>
-  </View>
-  
-);
+  </TouchableOpacity>
+  );
+};
 
 const PlayRecentsSection = () => {
     const renderItem = ({ item }) => {
