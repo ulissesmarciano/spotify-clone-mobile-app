@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import { withSafeAreaInsets } from 'react-native-safe-area-context';
 
 export default StyleSheet.create({
 
@@ -16,6 +17,13 @@ export default StyleSheet.create({
     headImage: {
         height: 220,
         width: 220,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+
+    textImageStyle: {
+        color: 'white',
+        fontSize: 90,
     },
 
     albumNameStyle: {
@@ -34,6 +42,13 @@ export default StyleSheet.create({
         height: 24,
         width: 24,
         borderRadius: 100,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+
+    textAvatarStyle: {
+        color: 'white',
+        fontWeight: 'bold',
     },
 
     nameArtistStyle: {

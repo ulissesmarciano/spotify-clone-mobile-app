@@ -1,7 +1,8 @@
 import React from 'react';
-import { Image, View, Text, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
 
 import LinearGradient from 'react-native-linear-gradient';
+import { useNavigation } from '@react-navigation/native';
 
 import S from './styled.js';
 
@@ -17,17 +18,24 @@ const Background = ({children}) => {
 
 
 export default function HeaderSection () {
+
+    const navigator = useNavigation();
+
     return(
         <Background>
         <View style={S.headContainer}>
             <View style={S.imageContainer}>
-                <Image style={S.headImage} source={{uri: mockedImage}}/>
+                <LinearGradient style={S.headImage} colors={['#f584f1', '#a623a1', '#52024f']}>
+                    <Text style={S.textImageStyle}>M</Text>
+                </LinearGradient>
             </View>
             <View>
                 <Text style={S.albumNameStyle}>NOME DO ALBUM</Text>
-                <TouchableOpacity style={S.artistContainerOrientation}>
-                    <Image style={S.avatarImage} source={{uri: mockedImage}}/>
-                    <Text style={S.nameArtistStyle}>Ulisses Gonçalves</Text>
+                <TouchableOpacity style={S.artistContainerOrientation} onPress={() => navigator.navigate("Artist Screen")}>
+                    <LinearGradient style={S.avatarImage} colors={['#4797ff', '#073c82']}>
+                        <Text style={S.textAvatarStyle}>U</Text>
+                    </LinearGradient>
+                    <Text style={S.nameArtistStyle}>Nome do Artista</Text>
                 </TouchableOpacity>
                 <Text style={S.subtitleStyle}>Álbum - 2019</Text>                
             </View>
