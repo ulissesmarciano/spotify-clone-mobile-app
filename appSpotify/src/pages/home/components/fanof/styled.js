@@ -1,25 +1,40 @@
 import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
-    headOrientation: {
-        flexDirection: 'row',
-      },
-  
-      avatar: {
-        alignSelf: 'center',
-        height: 50,
-        width: 50,
-        borderRadius: 100,
-    },
-
     container: {
         marginTop: 15,
         marginLeft: 15,
     },
 
+    headOrientation: {
+        flexDirection: 'row',
+        alignItems: 'center',
+    },
+  
+    avatar: {
+        height: 50,
+        width: 50,
+        borderRadius: 100,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+
+    textAvatarImage: {
+        fontSize: 20,
+        color: 'white',
+        fontWeight: 'bold',
+    },
+
+
     containerOrientation: {
         flexDirection: 'row',
     },
+
+    containerItem:{
+        marginTop: 8,
+        marginRight: 12,
+        width: 160,
+    },    
 
     supTitle: {
         marginLeft: 12,
@@ -42,9 +57,17 @@ export default StyleSheet.create({
     
     imageItem: {
         marginTop: 15,
+        justifyContent: 'center',
+        alignItems: 'center',
         height: 160,
         width: 160,
     },
+
+    textImageStyle: {
+        color: 'white',
+        fontSize: 50,
+        fontWeight: 'bold',
+      },
 
     albumTitle: {
         color: 'white',

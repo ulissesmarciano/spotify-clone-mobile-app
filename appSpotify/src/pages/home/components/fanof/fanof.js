@@ -1,30 +1,53 @@
-import React from "react";
-import { View, Text, Image } from 'react-native';
-import S from './styled'
+import React from 'react';
+import { View, Text, TouchableOpacity } from 'react-native';
+import LinearGradient from 'react-native-linear-gradient';
 
-const imageProfileGithub = 'https://avatars.githubusercontent.com/u/104742158?v=4';
+import { useNavigation } from '@react-navigation/native';
+
+import S from './styled.js';
+
+
+const Item = () => {
+    const navigator = useNavigation();
+    return(
+        <TouchableOpacity style={S.containerItem} onPress={() => navigator.navigate("Album Screen")}>
+            <LinearGradient style={S.imageItem} colors={['#6357eb', '#190bb3']}>
+                <Text style={S.textImageStyle}>A</Text>
+            </LinearGradient>
+            <Text style={S.albumTitle}>Nome do Álbum</Text>
+            <Text style={S.albumSubtitle}>Album - Nome do Artista</Text>
+        </TouchableOpacity>
+    );
+};
+
+const Item2 = () => {
+    const navigator = useNavigation();
+    return(
+        <TouchableOpacity style={S.containerItem} onPress={() => navigator.navigate("Album Screen")}>
+            <LinearGradient style={S.imageItem} colors={['#f5d236', '#826c09']}>
+                <Text style={S.textImageStyle}>A</Text>
+            </LinearGradient>
+            <Text style={S.albumTitle}>Nome do Álbum</Text>
+            <Text style={S.albumSubtitle}>Album - Nome do Artista</Text>
+        </TouchableOpacity>
+    );
+};
 
 const FanOfSection = () => {    
     return (
         <View style={S.container}>
-                <View style={S.headOrientation}>
-                    <Image style={S.avatar} source={{uri: imageProfileGithub}}/>
-                    <View>
-                        <Text style={S.supTitle}>PARA FÃS DE</Text>
-                        <Text style={S.title}>Ulisses Marciano</Text>
-                    </View>
+            <View style={S.headOrientation}>
+                <LinearGradient style={S.avatar} colors={['#e89bb4', '#ff0051']}>
+                    <Text style={S.textAvatarImage}>B</Text>
+                </LinearGradient>
+                <View>
+                    <Text style={S.supTitle}>PARA FÃS DE</Text>
+                    <Text style={S.title}>Nome do Artista</Text>
                 </View>
+            </View>
             <View style={S.containerOrientation}>
-                <View style={S.item}>
-                    <Image style={S.imageItem} source={{uri: imageProfileGithub}}/>
-                    <Text style={S.albumTitle}>Nome do Álbum</Text>
-                    <Text style={S.albumSubtitle}>Album - Ulisses Marciano</Text>
-                </View>
-                <View style={S.item}>
-                    <Image style={S.imageItem} source={{uri: imageProfileGithub}}/>
-                    <Text style={S.albumTitle}>Nome do Álbum</Text>
-                    <Text style={S.albumSubtitle}>Album - Ulisses Marciano</Text>
-                </View>
+                <Item />
+                <Item2 />
             </View>
         </View>
     );

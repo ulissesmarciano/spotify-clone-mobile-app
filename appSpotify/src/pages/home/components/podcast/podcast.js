@@ -16,7 +16,7 @@ const PodcastSection = () => {
             <LinearGradient style={S.backgroundContainer} colors={['#rgba(227, 154, 225, 0.6)', '#rgba(191, 71, 188, 0.6)', '#rgba(102, 18, 100, 0.6)']} >
                 <View style={S.contentContainer}>
                     <View>
-                        <Text style={S.title}>Podcast do Ulisses</Text>
+                        <Text style={S.title}>Podcast do Topfy</Text>
                         <Text style={S.subtitle}>Ouça o melhor podcast sobre desenvolvimento de software</Text>
                     </View>
                     <TouchableOpacity style={S.buttonContainer} onPress={() => navigation.navigate("Podcast Screen")}>
