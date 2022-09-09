@@ -18,6 +18,12 @@ export default StyleSheet.create({
         alignItems: 'center',
     },
 
+    textImageContainer: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'flex-end',
+    },
+
     title: {
         color: 'white',
         fontSize: 40,
