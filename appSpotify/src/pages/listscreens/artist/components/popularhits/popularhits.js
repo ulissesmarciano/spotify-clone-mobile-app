@@ -6,9 +6,6 @@ import { useNavigation } from '@react-navigation/native';
 import S from './styled.js';
 import LinearGradient from 'react-native-linear-gradient';
 
-const mockedImage = 'https://avatars.githubusercontent.com/u/104742158?v=4';
-
-
 const Item = ({title, subtitle, id}) =>{
 
     const navigator = useNavigation();

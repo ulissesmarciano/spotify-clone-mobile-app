@@ -15,7 +15,6 @@ export default StyleSheet.create({
         marginTop: 15,
         marginLeft: 8,
         marginRight: 8,
-        backgroundColor: 'black',
         alignItems: 'flex-start',
         justifyContent: 'space-between',
     },
@@ -32,6 +31,13 @@ export default StyleSheet.create({
         height: 25,
         width: 25,
         borderRadius: 100,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+
+    avatarTextStyle: {
+        color: 'white',
+        fontWeight: 'bold',
     },
 
     itemSelectStyle: {
@@ -40,6 +46,18 @@ export default StyleSheet.create({
         fontWeight: 'bold',
         marginLeft: 8,
         marginRight: 8,
+    },
+
+    textImageContainer: {
+        alignSelf: 'center',
+        justifyContent: 'center',
+    },
+
+    textImageStyle: {
+        color: 'white',
+        fontSize: 70,
+        fontWeight: 'bold',
+        opacity: 0.6,
     },
 
     albumContainer: {
@@ -52,6 +70,14 @@ export default StyleSheet.create({
     albumStyle: {
         height: 50,
         width: 50,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+
+    textAlbumStyle: {
+        color: 'white',
+        fontSize: 18,
+        fontWeight: 'bold',
     },
 
     titleContainer: {

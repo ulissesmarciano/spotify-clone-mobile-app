@@ -1,33 +1,38 @@
 import React from 'react';
-import {View, Text, ImageBackground, Image, TouchableOpacity } from 'react-native';
+import {View, Text, Image, TouchableOpacity } from 'react-native';
+
+import LinearGradient from 'react-native-linear-gradient';
+import { useNavigation } from '@react-navigation/native';
 
 import S from './styled.js';
 
-const mockedImage = 'https://avatars.githubusercontent.com/u/104742158?v=4';
-
 const Item = () =>{
+
+    const navigator = useNavigation();
+
     return(
-        <View>
-            <ImageBackground 
-            style={S.imageItem} 
-            source={{uri:mockedImage}} 
-            imageStyle={{
-                borderRadius: 6,
-                opacity: 0.7
-            }}>
+        <TouchableOpacity onPress={() => navigator.navigate("Track Player")}>
+            <LinearGradient style={S.imageItem} colors={['#4af244', '#034f01']}>
                 <View style={S.selectContainer}>
-                    <Image style={S.avatarStyle} source={{uri: mockedImage}} />
+                    <LinearGradient style={S.avatarStyle} colors={['#e67a22', '#a66702']}>
+                        <Text style={S.avatarTextStyle}>U</Text>
+                    </LinearGradient>
                     <Text style={S.itemSelectStyle}>Música selecionada</Text>
                 </View>
+                <View style={S.textImageContainer}>
+                    <Text style={S.textImageStyle}>M</Text>
+                </View>
                 <View style={S.albumContainer}>
-                    <Image style={S.albumStyle} source={{uri: mockedImage}} />
+                    <LinearGradient style={S.albumStyle} colors={['#5bc0eb', '#013b54']}>
+                        <Text style={S.textAlbumStyle}>M</Text>
+                    </LinearGradient>
                     <View style={S.titleContainer}>
                         <Text style={S.albumTitle}>Música</Text>
                         <Text style={S.albumSubtitle}>Faixa . Lançamento</Text>
                     </View>
                 </View>
-            </ImageBackground>
-        </View>
+            </LinearGradient>
+        </TouchableOpacity>
     );
 };
 
