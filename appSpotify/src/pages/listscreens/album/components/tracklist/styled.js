@@ -12,6 +12,10 @@ export default StyleSheet.create({
         alignItems: 'center',
     },
 
+    titleContainer: {
+        flex:1,
+    },
+
     titleStyle: {
         color: 'white',
         fontSize: 22,        
