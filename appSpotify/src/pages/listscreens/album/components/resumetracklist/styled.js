@@ -22,5 +22,13 @@ export default StyleSheet.create({
         width: 50,
         borderRadius: 100,
         marginRight: 10,
+        alignItems: 'center',
+        justifyContent: 'center',
     },
+
+    textAvatarStyle: {
+        color: 'white',
+        fontSize: 18,
+        fontWeight: 'bold',
+    }
 });

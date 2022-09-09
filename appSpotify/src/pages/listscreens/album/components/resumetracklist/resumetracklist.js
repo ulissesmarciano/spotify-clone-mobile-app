@@ -1,20 +1,25 @@
 import React from 'react';
-import { View, Text, Image} from 'react-native';
+import { View, Text, TouchableOpacity} from 'react-native';
 
+import { useNavigation } from '@react-navigation/native';
+import LinearGradient from 'react-native-linear-gradient';
 
 import S from './styled.js';
 
-const mockedImage = 'https://avatars.githubusercontent.com/u/104742158?v=4';
-
 const ResumeTracklistSection = () => {
+
+    const navigator = useNavigation();
+    
     return(
         <View style={S.container}>
             <Text style={S.resumeText}>17 de maio de 2019</Text>
             <Text style={S.resumeText}>11 músicas - 39min46s</Text>
-            <View style={S.artistContainer}>
-                <Image style={S.avatarStyle} source={{uri: mockedImage}}/>
+            <TouchableOpacity style={S.artistContainer} onPress={() => navigator.navigate("Artist Screen")}>
+                <LinearGradient style={S.avatarStyle} colors={['#367bd6', '#073c82']}>
+                    <Text style={S.textAvatarStyle}>U</Text>
+                </LinearGradient>
                 <Text style={S.resumeText}>Ulisses Gonçalves</Text>
-            </View>
+            </TouchableOpacity>
         </View>
     );
 };
