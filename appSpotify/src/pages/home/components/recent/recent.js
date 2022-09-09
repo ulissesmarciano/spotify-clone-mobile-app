@@ -67,49 +67,31 @@ export default function RecentSection(){
     const navigation = useNavigation();
 
     return (
-    <View>
-        <View >
-            <View style={S.headContainer}>
-                <Text style={S.title}>Boa Noite</Text>
-                    <View style={S.iconsContainer}>
-                        <TouchableOpacity>
-                            <Image style={S.iconSize} source={require('./icons/sino.png')}/>
-                        </TouchableOpacity>
-                        <TouchableOpacity> 
-                            <Image style={S.iconSize} source={require('./icons/historico.png')}/>
-                        </TouchableOpacity>
-                        <TouchableOpacity>
-                            <Image style={S.iconSize} source={require('./icons/config.png')}/>
-                        </TouchableOpacity>
-                    </View> 
+        <View style={S.container}>
+            <View style={S.boxContent}>
+                    <TouchableOpacity style={S.recentItemContainer} onPress={() => navigation.navigate("Track Player")}>
+                        <RecentMusic title="Música"/>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={S.recentItemContainer} onPress={() => navigation.navigate("Album Screen")}>
+                        <RecentAlbum title="Album"/>
+                    </TouchableOpacity>               
             </View>
-            <View>
-                <View style={S.boxContent}>
-                        <TouchableOpacity style={S.recentItemContainer} onPress={() => navigation.navigate("Track Player")}>
-                            <RecentMusic title="Música"/>
-                        </TouchableOpacity>
-                        <TouchableOpacity style={S.recentItemContainer} onPress={() => navigation.navigate("Album Screen")}>
-                            <RecentAlbum title="Album"/>
-                        </TouchableOpacity>               
-                </View>
-                <View style={S.boxContent}>
-                        <TouchableOpacity style={S.recentItemContainer} onPress={() => navigation.navigate("Artist Screen")}>
-                            <RecentArtist title="Artista"/>
-                        </TouchableOpacity>
-                        <TouchableOpacity style={S.recentItemContainer} onPress={() => navigation.navigate("Podcast Screen")}>
-                            <RecentPodcast title="Podcast"/>
-                        </TouchableOpacity>               
-                </View>
-                <View style={S.boxContent}>
-                        <TouchableOpacity style={S.recentItemContainer} onPress={() => navigation.navigate("Playlist Screen")}>
-                            <RecentPlaylist title="Playlist"/>
-                        </TouchableOpacity>               
-                        <TouchableOpacity style={S.recentItemContainer} onPress={() => navigation.navigate("Track Player")}>
-                            <RecentMusic title="Música"/>
-                        </TouchableOpacity>
-                </View>
+            <View style={S.boxContent}>
+                    <TouchableOpacity style={S.recentItemContainer} onPress={() => navigation.navigate("Artist Screen")}>
+                        <RecentArtist title="Artista"/>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={S.recentItemContainer} onPress={() => navigation.navigate("Podcast Screen")}>
+                        <RecentPodcast title="Podcast"/>
+                    </TouchableOpacity>               
+            </View>
+            <View style={S.boxContent}>
+                    <TouchableOpacity style={S.recentItemContainer} onPress={() => navigation.navigate("Playlist Screen")}>
+                        <RecentPlaylist title="Playlist"/>
+                    </TouchableOpacity>               
+                    <TouchableOpacity style={S.recentItemContainer} onPress={() => navigation.navigate("Track Player")}>
+                        <RecentMusic title="Música"/>
+                    </TouchableOpacity>
             </View>
         </View>
-    </View>
     );
 };

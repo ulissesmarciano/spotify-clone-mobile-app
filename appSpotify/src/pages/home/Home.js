@@ -15,6 +15,7 @@ import FanOfSection from "./components/fanof/fanof.js";
 import ParadeSection from "./components/parade/parade.js";
 import BestOfArtistsSection from "./components/bestofartists/bestofartists.js";
 import BottonSection from "./components/bottoncontainer/botton.js";
+import HeaderSection from "./components/header/header.js";
 
 
 const colorDefault = '#rgb(18, 18, 18)';
@@ -24,6 +25,7 @@ export default function Home(){
         <SafeAreaView style={styles.container}>
         <StatusBar barStyle="light-content" backgroundColor= "black" />
             <ScrollView>
+                <HeaderSection/>
                 <RecentSection />
                 <PodcastSection />
                 <OldMusicsSection />

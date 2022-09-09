@@ -1,39 +1,14 @@
 import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
-    headContainer: {
-        flexDirection: 'row',
-        marginTop: 30,
-        marginLeft: 15,
-        marginRight: 15,
-        marginBottom: 10,
+    container: {
+        marginTop: 10
     },
-
-    title: {
-        alignSelf: 'center',
-        flex: 5,
-        color: 'white',
-        fontSize: 32,
-        fontWeight: 'bold',
-    },
-
-    iconsContainer: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        flex: 3,
-    },
-
-    iconSize: {
-        height: 30,
-        width: 30,
-    },
-
+    
     boxContent: {
         flexDirection: 'row',
         justifyContent: 'space-between',
-        marginLeft: 11,
-        marginRight: 11,
+        marginHorizontal: 11,
     },
 
     recentItemContainer: {
