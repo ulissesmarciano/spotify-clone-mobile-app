@@ -56,8 +56,7 @@ function HomeStackScreen() {
     component={HomeScreen}
     options={{
       title: ' ',
-      headerTransparent: true,
-      headerBackTitleVisible: false,
+      headerShown: false,
     }}
     />
 
@@ -147,10 +146,29 @@ function ExplorerStackScreen() {
       component={SearchPlaceSection}
       options={{
         title: ' ',
-        headerTransparent: true,
-        headerBackVisible: false,         
+         headerShown: false,
       }}  
-      />      
+      />
+      <ExplorerStack.Screen 
+      name="Podcast Screen"
+      component={PodcastScreen}
+      options={{
+        title: ' ',
+        headerTransparent: true,
+        headerTintColor: 'white',
+        
+      }}
+      /> 
+      <ExplorerStack.Screen 
+      name="Playlist Screen"
+      component={PlaylistScreen}
+      options={{
+        title: ' ',
+        headerTransparent: true,
+        headerTintColor: 'white',
+        
+      }}
+      />  
     </ExplorerStack.Navigator>
   );
 }
@@ -166,8 +184,7 @@ function LibraryStackScreen() {
       component={LibraryScreen}
       options={{
         title: ' ',
-        headerTransparent: true,
-        headerBackVisible: false,         
+        headerShown: false,       
       }}  
       />
       <LibraryStack.Screen 
@@ -175,8 +192,7 @@ function LibraryStackScreen() {
       component={LibraryPlace}      
       options={{
         title: ' ',
-        headerTransparent: true,
-        headerBackVisible: false,         
+        headerShown: false,        
       }}  
       />  
     </LibraryStack.Navigator>

@@ -4,7 +4,7 @@ export default StyleSheet.create({
     headContainer:{
         flexDirection: 'row',
         alignItems: 'center',  
-        marginTop: 50,
+        marginTop: 25,
         marginLeft: 20,
         marginRight: 20,
         marginBottom: 20,

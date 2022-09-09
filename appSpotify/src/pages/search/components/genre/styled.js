@@ -9,15 +9,20 @@ export default StyleSheet.create({
         marginLeft: 15,
     },
 
-    imageContainer:{
+    itemContainer:{
+        flex: 1,
         marginTop: 15,
-        marginHorizontal: 15,
+        marginHorizontal: 7.5,
         flexDirection: 'row',
         justifyContent: 'space-between',
     },
 
+    imageContainer: {
+        flex: 1,
+        marginHorizontal: 7.5,
+    },
+
     item: {
-        width: 175,
         height: 100,
     },
 

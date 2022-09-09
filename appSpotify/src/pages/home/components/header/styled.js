@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 export default StyleSheet.create({
     container: {
         flexDirection: 'row',
-        marginTop: 55,
+        marginTop: 15,
         marginHorizontal: 11,
         alignItems: 'center',
     },

@@ -1,13 +1,18 @@
 import React from "react";
-import { SafeAreaView, StatusBar, ScrollView, StyleSheet } from "react-native";
+import { SafeAreaView, StatusBar, ScrollView, StyleSheet, View } from "react-native";
 
 import SearchSection from "./components/search/search";
-import BottomSection from "./components/bottomcontainer/bottom";
 import GenreSection from "./components/genre/genre";
 import PodcastCategorySection from "./components/podcastcategory/podcastcategory.js";
 import VariousSection from "./components/variousselection/variousselection";
 
 const colorDefault = '#rgb(18, 18, 18)';
+
+const Bottom = () => {
+    return(
+        <View style={{marginBottom: 80}}/>
+    );
+};
 
 const Explorer = () => {
     return (
@@ -18,7 +23,7 @@ const Explorer = () => {
                 <GenreSection />
                 <PodcastCategorySection />
                 <VariousSection />
-                <BottomSection />
+                <Bottom/>
             </ScrollView>
         </SafeAreaView>
     );
