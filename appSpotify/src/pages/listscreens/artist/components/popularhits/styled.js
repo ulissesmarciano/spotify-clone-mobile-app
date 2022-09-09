@@ -30,7 +30,14 @@ export default StyleSheet.create ({
     imageMusic: {
         height: 50,
         width: 50,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
 
+    textImageStyle: {
+        color: 'white',
+        fontSize: 22,
+        fontWeight: 'bold',
     },
 
     titleContainer: {
