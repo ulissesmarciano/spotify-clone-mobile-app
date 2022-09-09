@@ -1,22 +1,25 @@
 import React from 'react';
-import { View, Text, Image, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
+
+import LinearGradient from 'react-native-linear-gradient';
+import { useNavigation } from '@react-navigation/native';
 
 import S from './styled.js';
 
-const mockedImage = 'https://avatars.githubusercontent.com/u/104742158?v=4';
-
-
 const Item = ({title, subtitle}) => {
+    const navigator = useNavigation();
     return(
-        <View style={S.itemContainer}>
+        <TouchableOpacity style={S.itemContainer} onPress={() => navigator.navigate("Album Screen")}>
             <View>
-                <Image style={S.albumScreen} source={{uri: mockedImage}} />
+                <LinearGradient style={S.albumScreen} colors={['#ffea00', '#ff9100']}>
+                    <Text style={S.textImageStyle}>M</Text>
+                </LinearGradient>
             </View>
             <View style={S.titleContainer}>
                 <Text style={S.itemTitle}>{title}</Text>
                 <Text style={S.itemSubtitle}>{subtitle}</Text>
             </View>
-        </View>
+        </TouchableOpacity>
     );
 };
 

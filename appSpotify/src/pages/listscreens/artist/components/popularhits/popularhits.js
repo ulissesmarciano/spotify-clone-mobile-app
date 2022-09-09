@@ -2,9 +2,9 @@ import React from 'react';
 import { View, Text, Image, TouchableOpacity } from 'react-native';
 
 import { useNavigation } from '@react-navigation/native';
+import LinearGradient from 'react-native-linear-gradient';
 
 import S from './styled.js';
-import LinearGradient from 'react-native-linear-gradient';
 
 const Item = ({title, subtitle, id}) =>{
 

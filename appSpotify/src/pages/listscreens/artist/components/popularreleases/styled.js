@@ -19,6 +19,14 @@ export default StyleSheet.create ({
     albumScreen: {
         height: 70,
         width: 70,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+
+    textImageStyle: {
+        color: 'white',
+        fontSize: 30,
+        fontWeight: 'bold',
     },
 
     titleContainer: {
