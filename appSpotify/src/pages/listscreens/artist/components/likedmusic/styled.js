@@ -9,15 +9,23 @@ export default StyleSheet.create({
     },
 
     artistAvatar: {
-        alignItems: 'flex-end',
-        flexDirection: 'row-reverse',
+        alignItems: 'center',
+        justifyContent: 'flex-end',
         height: 50,
         width: 50,
+        borderRadius: 100,
+    },
+
+    textImageStyle: {
+        color: 'white',
+        fontWeight: 'bold',
+        fontSize: 14,
     },
 
     likeImage: {
         height: 20,
         width: 20,
+        alignSelf: 'flex-end',
     },
 
     textContainer: {

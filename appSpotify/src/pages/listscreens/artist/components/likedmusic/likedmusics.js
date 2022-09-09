@@ -1,23 +1,23 @@
 import React from 'react';
-import { View, Text, ImageBackground, Image, TouchableOpacity } from 'react-native';
+import { View, Text, Image, TouchableOpacity } from 'react-native';
 
-import S from './styled.js'
+import LinearGradient from 'react-native-linear-gradient';
+import { useNavigation } from '@react-navigation/native';
 
-const mockedImage = 'https://avatars.githubusercontent.com/u/104742158?v=4';
-
+import S from './styled.js';
 
 export default function LikedMusics () {
+
+    const navigator = useNavigation(); 
+
     return(
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigator.navigate("Playlist Screen")}>
         <View style={S.container}>
             <View>
-                <ImageBackground 
-                style={S.artistAvatar} 
-                source={{uri:mockedImage}}
-                imageStyle={{borderRadius: 100}}
-                >
+                <LinearGradient style={S.artistAvatar} colors={['#8a33f5', '#310469']}>
+                    <Text style={S.textImageStyle}>U</Text>
                     <Image style={S.likeImage} source={require('./icons/likedIcon.png')}/>
-                </ImageBackground>
+                </LinearGradient>
             </View>
             <View style={S.textContainer}>
                 <Text style={S.title}>Músicas Curtidas</Text>
