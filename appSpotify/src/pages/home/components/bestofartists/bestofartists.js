@@ -1,5 +1,7 @@
-import React from "react";
-import { SafeAreaView, View, FlatList, Text, Image } from 'react-native';
+import React from 'react';
+import { SafeAreaView, View, FlatList, Text, Image, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import LinearGradient from 'react-native-linear-gradient';
 import S from './styled';
 
 const imageProfileGithub = 'https://avatars.githubusercontent.com/u/104742158?v=4';
@@ -43,13 +45,30 @@ const DATA = [
 ];  
 
 
-const Item = ({ title, subtitle }) => (
-    <View style={S.item}>
-      <Image style={S.image} source={{uri: imageProfileGithub}}/>
+const Item = ({ title }) => {
+  const navigator = useNavigation();
+  return(
+    <TouchableOpacity style={S.item} onPress={() => navigator.navigate("Artist Screen")}>
+      <View style={S.imageOrientation}>
+      <LinearGradient style={S.itemScreen} colors={['#d4ba3b', '#ff7700']}>
+          <Text style={S.textImageStyle}>A</Text>
+      </LinearGradient>
+      <LinearGradient style={S.itemScreen} colors={['#83d9eb', '#008099']}>
+          <Text style={S.textImageStyle}>A</Text>
+      </LinearGradient>
+      </View>
+      <View style={S.imageOrientation}>
+      <LinearGradient style={S.itemScreen} colors={['#78f582', '#01800c']}>
+          <Text style={S.textImageStyle}>A</Text>
+      </LinearGradient>
+      <LinearGradient style={S.itemScreen} colors={['#eb88cf', '#910068']}>
+          <Text style={S.textImageStyle}>A</Text>
+      </LinearGradient>
+      </View>
       <Text style={S.title}>{title}</Text>
-      <Text style={S.subtitle}>{subtitle}</Text>    
-    </View>
-);
+    </TouchableOpacity>
+)
+};
 
 const BestOfArtistsSection = () => {
     const renderItem = ({ item }) => (

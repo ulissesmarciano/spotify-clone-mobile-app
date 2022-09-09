@@ -50,7 +50,7 @@ const DATA = [
 const Item = ({ title }) => {
   const navigator = useNavigation();
   return(
-    <TouchableOpacity style={S.item}>
+    <TouchableOpacity style={S.item} onPress={() => navigator.navigate("Artist Screen")}>
       <View style={S.imageOrientation}>
       <LinearGradient style={S.itemScreen} colors={['#d4ba3b', '#ff7700']}>
           <Text style={S.textImageStyle}>A</Text>
