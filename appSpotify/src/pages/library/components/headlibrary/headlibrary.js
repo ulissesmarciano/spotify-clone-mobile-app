@@ -1,11 +1,10 @@
 import React from 'react';
 import { View, Text, Image, TouchableOpacity } from 'react-native';
+import LinearGradient from 'react-native-linear-gradient';
 
 import { useNavigation } from '@react-navigation/native';
 
 import S from './styled.js';
-
-const mockImage = 'https://avatars.githubusercontent.com/u/104742158?v=4';
 
 export default function HeadSection() {
 
@@ -13,7 +12,9 @@ export default function HeadSection() {
 
     return(
         <View style={S.container}>                
-            <Image style={S.profileImage} source={{uri: mockImage}}/>
+            <LinearGradient style={S.avatarStyle} colors={['#fa7da5', '#ff0051']}>
+                <Text style={S.textImageStyle}>U</Text>
+            </LinearGradient>
             <Text style={S.headTitle}> Sua Biblioteca</Text>
             <View style={S.buttonContainer} >
                 <TouchableOpacity style={S.buttonStyle} onPress={() => navigation.navigate('Detalhes')}>

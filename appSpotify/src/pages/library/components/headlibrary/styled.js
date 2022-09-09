@@ -3,16 +3,23 @@ import { StyleSheet } from 'react-native';
 export default StyleSheet.create({
     container: {
         flexDirection: 'row',
-        marginTop: 28,
+        marginTop: 50,
         marginLeft: 10,
         marginRight: 10,
         height: 35,
     },
 
-    profileImage: {
+    avatarStyle: {
         height: 35,
         width: 35,
         borderRadius: 100,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+
+    textImageStyle: {
+        color: 'white',
+        fontWeight: 'bold',
     },
 
     headTitle: {
