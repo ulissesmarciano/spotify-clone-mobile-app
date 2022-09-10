@@ -13,7 +13,7 @@ export default StyleSheet.create({
         fontWeight: 'bold',
         marginBottom: 10,
     },
-
+    
     item: {
         marginVertical: 8,
         marginHorizontal: 8,
@@ -23,7 +23,16 @@ export default StyleSheet.create({
     itemImage: {
         height: 140,
         width: 140,
+        alignItems: 'center',
+        justifyContent: 'center',
     },
+
+    textItemImage: {
+        color: 'white',
+        fontSize: 50,
+        fontWeight: 'bold',
+    },
+
     title: {
         color: 'white',
         fontSize: 18,
