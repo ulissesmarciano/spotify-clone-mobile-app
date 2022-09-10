@@ -4,27 +4,28 @@ Quando inicio e navego a página ExplorerStackScreen ela fica aberta.
 
 */
 
-import React from "react";
-import { View, Image } from "react-native";
+import React from 'react';
+import { View, Image } from 'react-native';
 
-import { NavigationContainer } from "@react-navigation/native";
-import { createBottomTabNavigator} from "@react-navigation/bottom-tabs";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 
-import Home from "./pages/home/Home.js";
-import Library from "./pages/library/Library";
-import LibraryPlace from "./pages/library/subpages/libraryplace/libraryplace.js";
-import Explorer from "./pages/search/Explorer.js";
-import SearchPlaceSection from "./pages/search/subpages/searchplace/searchplace.js";
+import Home from './pages/home/Home.js';
+import Library from './pages/library/Library';
+import LibraryPlace from './pages/library/subpages/libraryplace/libraryplace.js';
+import Explorer from './pages/search/Explorer.js';
+import SearchPlaceSection from './pages/search/subpages/searchplace/searchplace.js';
 
-import TrackPlayer from "./pages/players/trackplayer/trackplayer.js";
-import PodcastPlayer from "./pages/players/podcastplayer/podcastplayer.js";
+import TrackPlayer from './pages/players/trackplayer/trackplayer.js';
+import PodcastPlayer from './pages/players/podcastplayer/podcastplayer.js';
 
-import ArtistScreen from "./pages/listscreens/artist/artist.js";
-import AlbumScreen from "./pages/listscreens/album/album.js";
-import PlaylistScreen from "./pages/listscreens/playlist/playlist.js";
-import PodcastScreen from "./pages/listscreens/podcast/podcast.js";
+import ArtistScreen from './pages/listscreens/artist/artist.js';
+import AlbumScreen from './pages/listscreens/album/album.js';
+import PlaylistScreen from './pages/listscreens/playlist/playlist.js';
+import PodcastScreen from './pages/listscreens/podcast/podcast.js';
+import DiscographyScreen from './pages/listscreens/discography/discography.js';
 
 
 function HomeScreen() {
@@ -122,6 +123,22 @@ function HomeStackScreen() {
         headerTransparent: true,
         headerTintColor: 'white',
         
+      }}
+      />
+    <HomeStack.Screen 
+      name="Discography Screen"
+      component={DiscographyScreen}
+      options={{
+        title: 'Lançamentos',
+        headerStyle: { 
+          backgroundColor: '#282828' 
+        },
+        headerTintColor: 'white',
+        headerTitleAlign: 'center',
+        headerTitleStyle: {
+          fontSize: 18,
+          fontWeight: 'bold',
+        },
       }}
       />
   </HomeStack.Navigator>

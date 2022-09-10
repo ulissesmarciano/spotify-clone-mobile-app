@@ -24,6 +24,9 @@ const Item = ({title, subtitle}) => {
 };
 
 export default function PopularReleasesSection (){
+
+    const navigator = useNavigation();
+
     return(
         <View>
             <Text style={S.titleSection}>Lançamentos populares</Text>
@@ -31,7 +34,7 @@ export default function PopularReleasesSection (){
             <Item title="Nome do Álbum" subtitle="2019 - Álbum"/>
             <Item title="Nome do Álbum" subtitle="2018 - Álbum"/>
             <Item title="Nome do Álbum" subtitle="2012 - Álbum"/>
-        <TouchableOpacity style={S.buttonAlbunContainer}>
+        <TouchableOpacity style={S.buttonAlbunContainer} onPress={() => navigator.navigate("Discography Screen")}>
             <Text style={S.albunsButton}>Ver discografia</Text>
         </TouchableOpacity>
         </View>
