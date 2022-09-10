@@ -1,5 +1,6 @@
 import React from 'react';
 import { StatusBar, ScrollView, View  } from 'react-native';
+import AlbumListSection from './components/albumlist/albumlist';
 import LastReleaseScreen from './components/lastrelease/lastrelease';
 
 const Background = ( {children} ) => {
@@ -22,6 +23,7 @@ export default function DiscographyScreen (){
             <StatusBar barStyle="light-content" backgroundColor= "black" />
             <ScrollView>
                 <LastReleaseScreen />
+                <AlbumListSection />
                 <Bottom />
             </ScrollView>
         </Background>
