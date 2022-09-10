@@ -19,6 +19,14 @@ export default StyleSheet.create({
         
     },
 
+    imageTextStyle: {
+        color: 'white',
+        fontSize: 70,
+        fontWeight: 'bold',
+        alignSelf: 'center',
+        opacity: 0.6,
+    },
+
     verifiedContainer: {
         flexDirection: 'row',
         margin: 8,
