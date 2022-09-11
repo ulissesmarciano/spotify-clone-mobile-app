@@ -24,6 +24,14 @@ export default StyleSheet.create({
         height: 140,
         width: 140,
         borderRadius: 100,
+        alignItems: 'center',   
+        justifyContent: 'center',
+    },
+
+    itemTextImage: {
+        color: 'white',
+        fontSize: 30,
+        fontWeight: 'bold',
     },
     
     title: {
