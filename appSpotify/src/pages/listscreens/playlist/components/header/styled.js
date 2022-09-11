@@ -16,6 +16,14 @@ export default StyleSheet.create({
     headerImage: {
         height: 85,
         width: 85,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+
+    textHeaderImage: {
+        color: 'white',
+        fontSize: 22,
+        fontWeight: 'bold',
     },
 
     titleContainer: {
@@ -39,6 +47,13 @@ export default StyleSheet.create({
         height: 25,
         width: 25,
         borderRadius: 100,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+
+    avatarTextStyle: {
+        color: 'white',
+        fontWeight: 'bold',
     },
 
     nameUserStyle: {
@@ -47,8 +62,6 @@ export default StyleSheet.create({
         marginLeft: 8,
         fontWeight: 'bold',
     },
-
-    //color: ''
 
     timeContainerOrientation: {
         flexDirection: 'row',
