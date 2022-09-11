@@ -3,6 +3,7 @@ import { View, StatusBar,ScrollView } from 'react-native';
 import BioSection from './components/bio/bio.js';
 import ListenerSection from './components/listeners/listeners.js';
 import PhotoCarouselSection from './components/photocarousel/photocarousel.js';
+import SocialMediaSection from './components/socialmedia/socialmedia.js';
 
 const Background = ({children}) => {
     return(
@@ -26,6 +27,7 @@ export default function AboutArtistScreen (){
                 <PhotoCarouselSection />
                 <ListenerSection />
                 <BioSection />
+                <SocialMediaSection />
                 <Bottom />
             </ScrollView>
         </Background>
