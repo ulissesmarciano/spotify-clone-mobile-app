@@ -35,7 +35,7 @@ export default function ArtistScreen (){
                 <HeadScreen />
                 <ControlListSection />
                 <LikedMusics />
-                <PopularHitsSection />
+                <PopularHitsSection/>
                 <ChoseOfTheArtistSection/>
                 <PopularReleasesSection/>
                 <ParticipatePlaylistSection />
