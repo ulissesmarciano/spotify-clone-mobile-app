@@ -26,6 +26,7 @@ import AlbumScreen from './pages/listscreens/album/album.js';
 import PlaylistScreen from './pages/listscreens/playlist/playlist.js';
 import PodcastScreen from './pages/listscreens/podcast/podcast.js';
 import DiscographyScreen from './pages/listscreens/discography/discography.js';
+import AboutArtistScreen from './pages/listscreens/artist/subpages/aboutartist/aboutartist.js';
 
 
 function HomeScreen() {
@@ -130,6 +131,22 @@ function HomeStackScreen() {
       component={DiscographyScreen}
       options={{
         title: 'Lançamentos',
+        headerStyle: { 
+          backgroundColor: '#282828' 
+        },
+        headerTintColor: 'white',
+        headerTitleAlign: 'center',
+        headerTitleStyle: {
+          fontSize: 18,
+          fontWeight: 'bold',
+        },
+      }}
+      />
+      <HomeStack.Screen 
+      name="About Artist Screen"
+      component={AboutArtistScreen}
+      options={{
+        title: 'Nome do Artista',
         headerStyle: { 
           backgroundColor: '#282828' 
         },
