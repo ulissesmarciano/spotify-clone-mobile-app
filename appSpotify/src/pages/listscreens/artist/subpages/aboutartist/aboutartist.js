@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, StatusBar,ScrollView } from 'react-native';
+import BioSection from './components/bio/bio.js';
 import ListenerSection from './components/listeners/listeners.js';
 import PhotoCarouselSection from './components/photocarousel/photocarousel.js';
 
@@ -24,6 +25,7 @@ export default function AboutArtistScreen (){
             <ScrollView>
                 <PhotoCarouselSection />
                 <ListenerSection />
+                <BioSection />
                 <Bottom />
             </ScrollView>
         </Background>
