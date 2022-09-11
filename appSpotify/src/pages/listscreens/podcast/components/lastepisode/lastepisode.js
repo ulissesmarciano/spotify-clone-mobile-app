@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { View, Text, Image, TouchableOpacity } from 'react-native';
 
+import { useNavigation } from '@react-navigation/native';
+
 import S from './styled.js';
 
 import AddIcon from './icons/adicicon.png';
@@ -20,12 +22,16 @@ export default function LastEpisodeSection (){
     const [alternatePlayButton, setAlternatePlayButton] = useState(true);
     const changePlayButton = () => {
         setAlternatePlayButton(previouState => !previouState)
-    }
+    };
+
+    const navigator = useNavigation();
 
     return(
         <View style={S.container}>
             <Text style={S.subtitle}>Último episódio</Text>
-            <Text style={S.title}>UMG165 - Opiniões IMPOPULARES sobre FILMES</Text>
+            <TouchableOpacity onPress={() => navigator.navigate("Podcast Player")}>
+                <Text style={S.title}>UMG165 - Opiniões IMPOPULARES sobre FILMES</Text>
+            </TouchableOpacity>
             <Text style={S.subtitle}>Reunimos três mulas e duas antas num podcast e colocamos todas elas pra conversar. O resultado foi e...</Text>
             <Text style={S.subtitle}>Qui - 1h 50min</Text>
             <View style={S.controllContainer}>
