@@ -41,6 +41,14 @@ export default StyleSheet.create({
     itemImage: {
         height: 65,
         width: 65,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+
+    textItemImage: {
+        color: 'white',
+        fontSize: 22,
+        fontWeight: 'bold',
     },
 
     itemTitleContainer: {

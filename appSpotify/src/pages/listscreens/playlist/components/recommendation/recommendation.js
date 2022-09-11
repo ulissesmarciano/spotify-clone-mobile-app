@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, Image, TouchableOpacity } from 'react-native';
 
 import LinearGradient from 'react-native-linear-gradient';
+import { useNavigation } from '@react-navigation/native';
 
 import S from './styled.js';
 
@@ -19,10 +20,13 @@ const Background = ( {children} ) => {
 };
 
 const Item = ({title, subtitle}) => {
+    const navigator = useNavigation();
     return(
         <View style={S.itemContainer}>
-            <Image style={S.itemImage} source={{uri: mockedImage}}/>
-            <TouchableOpacity style={S.itemTitleContainer}>
+            <LinearGradient style={S.itemImage} colors={['#f72100', '#470a00']}>
+                <Text style={S.textItemImage}>M</Text>
+            </LinearGradient>
+            <TouchableOpacity style={S.itemTitleContainer} onPress={() => navigator.navigate("Track Player")}>
                 <Text style={S.titleItem}>{title}</Text>
                 <Text style={S.subtitleItem}>{subtitle}</Text>
             </TouchableOpacity>
