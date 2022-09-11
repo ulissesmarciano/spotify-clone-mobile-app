@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import { View, Text, Image, TouchableOpacity } from 'react-native';
 
+import LinearGradient from 'react-native-linear-gradient';
+
 import Slider from '@react-native-community/slider';
 
 import TrackVel from './icons/1x.png';
@@ -40,7 +42,9 @@ export default function PlayerScreen(){
     return(
         <View>
         <View style={S.coverContainer} >
-            <Image style={S.coverScreen} source={{uri: mockedImage}} />
+            <LinearGradient style={S.coverScreen} colors={['#613461', '#121212']}>
+                <Text style={S.textCoverScreen}>M</Text>
+            </LinearGradient>
         </View>
         <View style={S.controllContainer}>
             <View style={S.titleContainer}>

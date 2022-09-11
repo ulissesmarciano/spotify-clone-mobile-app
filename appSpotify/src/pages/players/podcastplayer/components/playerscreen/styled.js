@@ -14,6 +14,13 @@ export default StyleSheet.create({
         height: 350,
         width: 350,
         borderRadius: 10,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+
+    textCoverScreen: {
+        color: 'white',
+        fontSize: 70,
     },
 
     controllContainer: {
