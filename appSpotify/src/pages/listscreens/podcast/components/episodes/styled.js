@@ -15,6 +15,14 @@ export default StyleSheet.create({
         height: 50,
         width: 50,
         borderRadius: 6,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+
+    textItemImage: {
+        color: 'white',
+        fontSize: 18,
+        fontWeight: 'bold',
     },
 
     title: {

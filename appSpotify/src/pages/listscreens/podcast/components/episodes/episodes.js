@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
-import { View, Text, Image, TouchableOpacity, Share } from 'react-native';
+import { View, Text, Image, TouchableOpacity } from 'react-native';
+
+import { useNavigation } from '@react-navigation/native';
+import LinearGradient from 'react-native-linear-gradient';
 
 import S from './styled.js';
 
@@ -25,12 +28,16 @@ const Item = ({title}) => {
         setAlternatePlayButton(previouState => !previouState)
     };
 
+  const navigator = useNavigation();
+
   return(
     <View style={S.container}>
-      <View style={S.titleContainer}>
-          <Image style={S.itemImage} source={{uri: mockedImage}}/>
+        <TouchableOpacity style={S.titleContainer} onPress={() => navigator.navigate("Podcast Player")}>
+          <LinearGradient style={S.itemImage} colors={['#cb05fc', '#4e0061']}>
+            <Text style={S.textItemImage}>E</Text>
+          </LinearGradient>
           <Text style={S.title}>{title}</Text>
-      </View>
+        </TouchableOpacity>
           <Text style={S.subtitle}>Reunimos três mulas e duas antas num podcast e colocamos todas elas pra conversar. O resultado foi e...</Text>
           <Text style={S.subtitle}>Qui - 1h 50min</Text>
           <View style={S.controllContainer}>
