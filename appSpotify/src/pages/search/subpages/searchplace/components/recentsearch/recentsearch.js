@@ -1,8 +1,10 @@
 import React from 'react';
-import { View, FlatList, Text, Image } from 'react-native';
-import S from './syled.js';
+import { View, FlatList, Text, Image, TouchableOpacity } from 'react-native';
 
-const mockedImage = 'https://avatars.githubusercontent.com/u/104742158?v=4';
+import LinearGradient from 'react-native-linear-gradient';
+import { useNavigation } from '@react-navigation/native';
+
+import S from './syled.js';
 
 const DATA = [
     {
@@ -77,44 +79,65 @@ const DATA = [
     },
   ];
 
-  const Item = ({ title, subtitle }) => ( //MÚSICA
-    <View style={S.itemContainer}>
-        <Image style={S.itemImage} source={{uri: mockedImage}}/>
-          <View style={S.itemOrientation} >
-            <View>
-              <Text style={S.itemTitle}>{title}</Text>
-              <Text style={S.itemSubtitle}>{subtitle}</Text>
+  const Item = ({ title, subtitle }) => {
+    const navigator = useNavigation();
+    return( //MÚSICA
+      <View style={S.itemContainer}>
+          <LinearGradient style={S.itemImage} colors={['#07f576', '#025227']}>
+            <Text style={S.textItemImage}>M</Text>
+          </LinearGradient>
+            <View style={S.itemOrientation} >
+              <TouchableOpacity onPress={() => navigator.navigate("Track Player")}>
+                <Text style={S.itemTitle}>{title}</Text>
+                <Text style={S.itemSubtitle}>{subtitle}</Text>
+              </TouchableOpacity>
+              <TouchableOpacity>
+                <Image style={S.closeButton} source={require('./icons/close.png')}/>
+              </TouchableOpacity>
             </View>
-            <Image style={S.closeButton} source={require('./icons/close.png')}/>
-          </View>
-    </View>
-  );
+      </View>
+    )
+  };
 
-  const Item2 = ({ title, subtitle }) => ( //ARTISTA
-    <View style={S.itemContainer}>
-        <Image style={S.itemImage2} source={{uri: mockedImage}}/>
-          <View style={S.itemOrientation} >
-            <View>
-              <Text style={S.itemTitle}>{title}</Text>
-              <Text style={S.itemSubtitle}>{subtitle}</Text>
+  const Item2 = ({ title, subtitle }) => {
+    const navigator = useNavigation();
+    return( //ARTISTA
+      <View style={S.itemContainer}>
+          <LinearGradient style={S.itemImage2} colors={['#ffdd00', '#635600']}>
+            <Text style={S.textItemImage}>A</Text>
+          </LinearGradient>
+            <View style={S.itemOrientation} >
+              <TouchableOpacity onPress={() => navigator.navigate("Artist Screen")}>
+                <Text style={S.itemTitle}>{title}</Text>
+                <Text style={S.itemSubtitle}>{subtitle}</Text>
+              </TouchableOpacity>
+              <TouchableOpacity>
+                <Image style={S.closeButton} source={require('./icons/close.png')}/>
+              </TouchableOpacity>
             </View>
-            <Image style={S.closeButton} source={require('./icons/close.png')}/>
-          </View>
-    </View>
-  );
+      </View>
+    )
+  };
 
-  const Item3 = ({ title, subtitle }) => ( //PLAYLIST
-    <View style={S.itemContainer}>
-        <Image style={S.itemImage} source={{uri: mockedImage}}/>
-          <View style={S.itemOrientation} >
-            <View>
-              <Text style={S.itemTitle}>{title}</Text>
-              <Text style={S.itemSubtitle}>{subtitle}</Text>
+  const Item3 = ({ title, subtitle }) => {
+    const navigator = useNavigation();
+    return( //PLAYLIST
+      <View style={S.itemContainer}>
+          <LinearGradient style={S.itemImage} colors={['#ee00ff', '#64006b']}>
+            <Text style={S.textItemImage}>P</Text>
+          </LinearGradient>
+            <View style={S.itemOrientation} >
+              <TouchableOpacity onPress={() => navigator.navigate("Playlist Screen")}>
+                <Text style={S.itemTitle}>{title}</Text>
+                <Text style={S.itemSubtitle}>{subtitle}</Text>
+              </TouchableOpacity>
+              <TouchableOpacity>
+                <Image style={S.closeButton} source={require('./icons/close.png')}/>
+              </TouchableOpacity>
             </View>
-            <Image style={S.closeButton} source={require('./icons/close.png')}/>
-          </View>
-    </View>
-  );
+      </View>
+    );
+  };
 
 const RecentSearchSection = () => {
     const renderItem = ({item}) => {

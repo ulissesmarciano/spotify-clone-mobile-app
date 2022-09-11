@@ -17,6 +17,8 @@ export default StyleSheet.create({
         height: 60,
         width: 60,
         marginLeft: 15,
+        alignItems: 'center',
+        justifyContent: 'center',
     },
 
     itemImage2: {
@@ -24,6 +26,15 @@ export default StyleSheet.create({
         width: 60,
         marginLeft: 15,
         borderRadius: 100,
+        alignItems: 'center',
+        justifyContent: 'center',
+
+    },
+
+    textItemImage: {
+        color: 'white',
+        fontSize: 22,
+        fontWeight: 'bold',
     },
 
     itemOrientation: {
