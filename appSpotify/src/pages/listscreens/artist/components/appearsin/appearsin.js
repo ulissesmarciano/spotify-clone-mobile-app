@@ -1,9 +1,10 @@
 import React from 'react';
 import { SafeAreaView, View, FlatList, Text, Image, TouchableOpacity } from 'react-native';
 
-import S from './styled.js';
+import { useNavigation } from '@react-navigation/native';
+import LinearGradient from 'react-native-linear-gradient';
 
-const mockedImage = 'https://avatars.githubusercontent.com/u/104742158?v=4';
+import S from './styled.js';
 
 const DATA = [
   {
@@ -43,17 +44,22 @@ const DATA = [
   },
 ];
 
-const Item = ({ title, subtitle }) => (
-  <View style={S.item}>
-    <Image style={S.itemImage} source={{uri: mockedImage}}/>
-    <Text style={S.title}>{title}</Text>
-    <Text style={S.subtitle}>{subtitle}</Text>
-  </View>
-);
+const Item = ({ title, subtitle }) => {
+  return(
+    <View style={S.item}>
+      <LinearGradient style={S.itemImage}  colors={['#ff0040', '#4f0014']}>
+        <Text style={S.imageTextStyle}>P</Text> 
+      </LinearGradient>
+      <Text style={S.title}>{title}</Text>
+      <Text style={S.subtitle}>{subtitle}</Text>
+    </View>
+  );
+};
 
 export default function AppearsInSection () {
+  const navigator = useNavigation();
   const renderItem = ({ item }) => (
-    <TouchableOpacity>
+    <TouchableOpacity onPress={() => navigator.navigate("Playlist Screen")}>
         <Item title={item.title} subtitle={item.subtitle} />
     </TouchableOpacity>
   );
