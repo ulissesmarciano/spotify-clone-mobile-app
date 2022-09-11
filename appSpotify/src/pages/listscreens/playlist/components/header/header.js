@@ -1,11 +1,13 @@
 import React from 'react';
-import { View, Image, Text } from 'react-native';
+import { View, Image, Text, TouchableOpacity } from 'react-native';
 
 import LinearGradient from 'react-native-linear-gradient';
+import { useState } from 'react';
 
 import S from './styled.js';
 
 import TimeImage from './icons/timeicon.png';
+import { useNavigation } from '@react-navigation/native';
 
 const Background = ({children}) =>{
     return(
@@ -16,6 +18,7 @@ const Background = ({children}) =>{
 };
 
 export default function HeaderSection(){
+    const navigator = useNavigation();
     return(
         <Background>
             <View style={S.container}>
@@ -41,12 +44,12 @@ export default function HeaderSection(){
                     <View style={S.titleContainer}>
                         <Text style={S.titleStyle}>Nome da Playlist</Text>
                     </View>
-                    <View style={S.userOrientation}>
+                    <TouchableOpacity style={S.userOrientation} onPress={() => navigator.navigate("Artist Screen")}>
                         <LinearGradient style={S.avatarStyle} colors={['#1500ff', '#06004a']}>
                             <Text style={S.avatarTextStyle}>U</Text>
                         </LinearGradient>
                         <Text style={S.nameUserStyle}>Ulisses Gonçalves</Text>
-                    </View>
+                    </TouchableOpacity>
                     <View style={S.timeContainerOrientation}>
                         <Image style={S.timeImage} source={TimeImage}/>
                         <Text style={S.timeText}>1h 52min</Text>

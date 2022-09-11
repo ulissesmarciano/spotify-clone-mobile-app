@@ -14,6 +14,14 @@ export default StyleSheet.create({
     trackImage: {
         height: 70,
         width: 70,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+
+    textTrackImage: {
+        color: 'white',
+        fontSize: 22,
+        fontWeight: 'bold',
     },
 
     textContainer: {
