@@ -11,6 +11,14 @@ export default StyleSheet.create({
     coverScreen: {
         height: 350,
         width: 350,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+
+    textCoverScreen: {
+        color: 'white',
+        fontSize: 70,
+        fontWeight: 'bold',
     },
 
     playerContainer: {

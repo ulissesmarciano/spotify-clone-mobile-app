@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, Image, Text, TouchableOpacity } from 'react-native';
 import Slider from '@react-native-community/slider';
+import LinearGradient from 'react-native-linear-gradient';
 
 import S from './styled.js';
 
@@ -47,7 +48,9 @@ export default function PlayerScreen () {
     return(
         <View>
             <View style={S.screenContainer}>
-                <Image style={S.coverScreen} source={{uri: mockedImage}} />
+                <LinearGradient style={S.coverScreen} colors={['#42a872', '#121212']}>
+                    <Text style={S.textCoverScreen}>M</Text>
+                </LinearGradient>
             </View>
             <View style={S.playerContainer}>
                 <View style={S.buttonPlayerScreen} >
