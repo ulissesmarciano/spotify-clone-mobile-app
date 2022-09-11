@@ -10,7 +10,6 @@ import ReminderFoc from './icons/remindericonfoc.png';
 import Config from './icons/configicons.png';
 import Options from './icons/optionsicon.png';
 
-const mockedImage = 'https://avatars.githubusercontent.com/u/104742158?v=4';
 
 const Background = ({children}) => {
     return(
@@ -36,7 +35,9 @@ export default function HeaderSection(){
         <Background>
             <View style={S.container}>
                 <View style={S.headContainer}>
-                    <Image style={S.podcastHeaderImage} source={{uri: mockedImage}}/>
+                    <LinearGradient style={S.podcastHeaderImage} colors={['#aa5986', '#121212']}>
+                        <Text style={S.textHeaderImage}>E</Text>
+                    </LinearGradient>
                     <View style={S.titleContainer}>
                         <Text style={S.title}>Nome do Podcast</Text>
                         <Text style={S.subtitle}>Canal do Podcast</Text>

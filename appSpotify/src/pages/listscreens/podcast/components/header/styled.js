@@ -17,6 +17,14 @@ export default StyleSheet.create({
         height: 170,
         width: 170,
         borderRadius: 10,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+
+    textHeaderImage: {
+        color: 'white',
+        fontSize: 60,
+        fontWeight: 'bold',
     },
 
     titleContainer: {
