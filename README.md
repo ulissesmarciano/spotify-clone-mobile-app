@@ -12,7 +12,7 @@ O projeto é basicamente mocado com a expertize em Flexbox e Navigation.
 
 ## FrontPage:
 
-<img src="assets\readmegifs\1.gif" style="zoom:70%;" />
+<img src="assets\readmegifs\1.gif" style="zoom:50%;" />
 
 
 
@@ -22,31 +22,31 @@ O projeto é basicamente mocado com a expertize em Flexbox e Navigation.
 
 #### MusicScreen:
 
-<img src="C:\Users\Uliss\Documents\GitHub\spotify-clone-mobile-app\assets\readmegifs\2.gif" style="zoom:50%;" />
+<img src="assets\readmegifs\2.gif" style="zoom:33%;" />
 
 
 
 #### AlbumScreen:
 
-<img src="C:\Users\Uliss\Documents\GitHub\spotify-clone-mobile-app\assets\readmegifs\3.gif" style="zoom:50%;" />
+<img src="assets\readmegifs\3.gif" style="zoom:33%;" />
 
 
 
 #### ArtistScreen:
 
-<img src="C:\Users\Uliss\Documents\GitHub\spotify-clone-mobile-app\assets\readmegifs\4.gif" style="zoom:50%;" />
+<img src="assets\readmegifs\4.gif" style="zoom:33%;" />
 
 
 
 #### PodcastScreen:
 
-<img src="C:\Users\Uliss\Documents\GitHub\spotify-clone-mobile-app\assets\readmegifs\5.gif" style="zoom:50%;" />
+<img src="assets\readmegifs\5.gif" style="zoom:33%;" />
 
 
 
 #### PlaylistScreen:
 
-<img src="C:\Users\Uliss\Documents\GitHub\spotify-clone-mobile-app\assets\readmegifs\6.gif" style="zoom:50%;" />
+<img src="assets\readmegifs\6.gif" style="zoom:33%;" />
 
 
 
