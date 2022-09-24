@@ -12,7 +12,7 @@ O projeto é basicamente mocado com a expertize em Flexbox e Navigation.
 
 ## FrontPage:
 
-<img src="assets\readmegifs\1.gif" style="zoom:50%;" />
+<img src="assets\readmegifs\1.gif" height="400" />
 
 
 
