@@ -12,7 +12,7 @@ O projeto é basicamente mocado com a expertize em Flexbox e Navigation.
 
 ## FrontPage:
 
-<img src="assets\readmegifs\1.gif" height="400" />
+<img src="assets\readmegifs\1.gif" height="500" />
 
 
 
@@ -22,13 +22,13 @@ O projeto é basicamente mocado com a expertize em Flexbox e Navigation.
 
 #### MusicScreen:
 
-<img src="assets\readmegifs\2.gif" style="zoom:33%;" />
+<img src="assets\readmegifs\2.gif" height="400" />
 
 
 
 #### AlbumScreen:
 
-<img src="assets\readmegifs\3.gif" style="zoom:33%;" />
+<img src="assets\readmegifs\3.gif" height="400" />
 
 
 
@@ -40,13 +40,13 @@ O projeto é basicamente mocado com a expertize em Flexbox e Navigation.
 
 #### PodcastScreen:
 
-<img src="assets\readmegifs\5.gif" style="zoom:33%;" />
+<img src="assets\readmegifs\5.gif" height="400" />
 
 
 
 #### PlaylistScreen:
 
-<img src="assets\readmegifs\6.gif" style="zoom:33%;" />
+<img src="assets\readmegifs\6.gif" height="400" />
 
 
 
