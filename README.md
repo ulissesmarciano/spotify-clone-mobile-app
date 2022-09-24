@@ -12,7 +12,7 @@ O projeto é basicamente mocado com a expertize em Flexbox e Navigation.
 
 ## FrontPage:
 
-<img src="C:\Users\Uliss\Documents\GitHub\spotify-clone-mobile-app\assets\readmegifs\1.gif" style="zoom:70%;" />
+<img src="C:\assets\readmegifs\1.gif" style="zoom:70%;" />
 
 
 
