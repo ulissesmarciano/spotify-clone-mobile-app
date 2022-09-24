@@ -4,9 +4,6 @@ import { useNavigation } from '@react-navigation/native';
 import LinearGradient from 'react-native-linear-gradient';
 import S from './styled';
 
-const imageProfileGithub = 'https://avatars.githubusercontent.com/u/104742158?v=4';
-
-
 const DATA = [
   {
     id: 1,
